@@ -1,4 +1,4 @@
-// PSH 공부 V0.4.1 — 빠른 복습(세로 넘김)과 정독(세로 읽기), 취약 개념 기록
+// PSH 공부 V0.4.2 — 개인 학습 기록·메모·목록 필터 + 기존 이중 모드 보존
 // 학습 콘텐츠는 기존 검증 데이터만 재사용하며 새 주장이나 카드 원문을 추가하지 않는다.
 const subjects={
  ethics:{name:'생활과 윤리',symbol:'◒',description:'사상가 · 윤리 이론',concepts:window.v033Topics.ethics,quizzes:window.v03Content.ethics},
@@ -8,17 +8,51 @@ const $=selector=>document.querySelector(selector);
 const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 let subjectKey='ethics',mode='concept',index=0,direction='next',unit='all',shuffledIds=null;
 let gesture=null,lastSwipeAt=0,detailHistoryActive=false,detailFocusReturn=null;
-let studyView='quick',unknownOnly=false,cardRatings={};
+let studyView='quick',unknownOnly=false,cardRatings={},reviewFilter='all';
+let personal={likes:{},bookmarks:{},notes:{}};
+let memoKey=null,memoOriginal='',memoFocusReturn=null,memoHistoryActive=false,ignoreNextPop=false;
 try{
  const viewSettings=JSON.parse(localStorage.getItem('psh-view-v041')||'{}');
  studyView=viewSettings.mode==='reading'?'reading':'quick';
  unknownOnly=viewSettings.unknownOnly===true;
 }catch(_){}
+reviewFilter=unknownOnly?'unknown':'all';
+try{
+ const updatedView=JSON.parse(localStorage.getItem('psh-view-v042')||'{}');
+ if(['all','unknown','bookmark','liked'].includes(updatedView.filter))reviewFilter=updatedView.filter;
+}catch(_){}
+unknownOnly=reviewFilter==='unknown';
+try{
+ const storedPersonal=JSON.parse(localStorage.getItem('psh-personal-v042')||'{}');
+ for(const category of ['likes','bookmarks','notes']){
+  if(storedPersonal[category]&&typeof storedPersonal[category]==='object'&&!Array.isArray(storedPersonal[category])){
+   personal[category]=storedPersonal[category];
+  }
+ }
+}catch(_){}
 try{
  const savedRatings=JSON.parse(localStorage.getItem('psh-ratings-v041')||'{}');
  if(savedRatings&&typeof savedRatings==='object'&&!Array.isArray(savedRatings))cardRatings=savedRatings;
 }catch(_){}
-function saveView(){localStorage.setItem('psh-view-v041',JSON.stringify({mode:studyView,unknownOnly}))}
+function saveView(){
+ localStorage.setItem('psh-view-v041',JSON.stringify({mode:studyView,unknownOnly:reviewFilter==='unknown'}));
+ localStorage.setItem('psh-view-v042',JSON.stringify({filter:reviewFilter}));
+}
+function savePersonal(){
+ try{localStorage.setItem('psh-personal-v042',JSON.stringify(personal));return true}
+ catch(_){window.alert?.('기기에 기록을 저장하지 못했어요. 저장 공간을 확인해 주세요.');return false}
+}
+function currentCard(){return mode==='concept'?deck()[index]||null:null}
+function personalKey(item){return subjectKey+':'+item.id}
+function personalActions(item){
+ const key=personalKey(item),liked=personal.likes[key]===true,bookmarked=personal.bookmarks[key]===true,noted=Boolean(personal.notes[key]);
+ return `<div class="personal-actions" role="group" aria-label="카드 개인화 기능"><button type="button" class="personal-control ${liked?'active':''}" data-action="like" aria-pressed="${liked}" aria-label="좋아요 ${liked?'취소':'추가'}"><span aria-hidden="true">${liked?'♥':'♡'}</span> 좋아요</button><button type="button" class="personal-control ${noted?'has-note':''}" data-action="note" aria-label="개인 메모 ${noted?'수정':'작성'}"><span aria-hidden="true">✎</span> 메모${noted?' ✓':''}</button><button type="button" class="personal-control ${bookmarked?'active':''}" data-action="bookmark" aria-pressed="${bookmarked}" aria-label="즐겨찾기 ${bookmarked?'해제':'추가'}"><span aria-hidden="true">${bookmarked?'★':'☆'}</span> 저장</button></div>`;
+}
+function bindPersonal(container){
+ container.querySelectorAll('.personal-control').forEach(button=>{
+  button.onclick=()=>{const kind=button.dataset.action;if(kind==='note')openMemo();else togglePersonal(kind)};
+ });
+}
 function ratingKey(item){return subjectKey+':'+item.id}
 function ratingOf(item){return cardRatings[ratingKey(item)]||null}
 function ratingActions(item){
@@ -33,23 +67,29 @@ function updateToolbar(){
  $('#quickMode').classList.toggle('active',studyView==='quick');
  $('#readingMode').classList.toggle('active',studyView==='reading');
  const candidates=subjects[subjectKey].concepts.filter(item=>unit==='all'||item.chapterId===unit);
- const unknownCount=candidates.filter(item=>ratingOf(item)==='unknown').length;
- $('#unknownOnlyButton').setAttribute('aria-pressed',String(unknownOnly));
- $('#unknownOnlyButton').classList.toggle('active',unknownOnly);
- $('#unknownOnlyButton').textContent=unknownOnly?`모르는 카드만 (${unknownCount}) ✓`:`모르는 카드만 (${unknownCount})`;
+ const counts={
+  unknown:candidates.filter(item=>ratingOf(item)==='unknown').length,
+  bookmark:candidates.filter(item=>personal.bookmarks[personalKey(item)]===true).length,
+  liked:candidates.filter(item=>personal.likes[personalKey(item)]===true).length
+ };
+ const filter=$('#reviewFilter');
+ filter.innerHTML='<option value="all">전체 카드 ('+candidates.length+')</option>'+
+  '<option value="unknown">모르는 카드 ('+counts.unknown+')</option>'+
+  '<option value="bookmark">즐겨찾기 ('+counts.bookmark+')</option>'+
+  '<option value="liked">좋아요 ('+counts.liked+')</option>';
+ filter.value=reviewFilter;
  $('#cardViewport').classList.toggle('reading-viewport',concept&&studyView==='reading');
 }
 function changeStudyView(next){
  if(!$('#studyDetail').hidden||mode!=='concept'||!['quick','reading'].includes(next))return;
  studyView=next;gesture=null;saveView();renderStudy();
 }
-function toggleUnknownOnly(){
- if(!$('#studyDetail').hidden||mode!=='concept')return;
- const current=deck()[index]?.id;
- unknownOnly=!unknownOnly;gesture=null;shuffledIds=null;saveView();
- const newIndex=deck().findIndex(item=>item.id===current);
- index=newIndex>=0?newIndex:0;
- renderStudy();
+function changeReviewFilter(next){
+ if(!$('#studyDetail').hidden||!$('#memoOverlay').hidden||mode!=='concept'||!['all','unknown','bookmark','liked'].includes(next))return;
+ const selected=currentCard()?.id;
+ reviewFilter=next;unknownOnly=next==='unknown';gesture=null;shuffledIds=null;saveView();
+ const match=deck().findIndex(item=>item.id===selected);
+ index=match>=0?match:0;renderStudy();
 }
 function markCurrent(status){
  if(mode!=='concept'||!['known','unknown'].includes(status))return;
@@ -73,7 +113,14 @@ function persist(){localStorage.setItem('psh-progress',JSON.stringify({subjectKe
 function itemId(item){return mode==='concept'?item.id:item[0]}
 function deck(){
  const all=mode==='concept'?subjects[subjectKey].concepts:subjects[subjectKey].quizzes;
- const items=all.filter(item=>(unit==='all'||(mode==='concept'?item.chapterId===unit:item[3].some(tag=>tag.startsWith(unit))))&&(mode!=='concept'||!unknownOnly||ratingOf(item)==='unknown'));
+ const items=all.filter(item=>{
+  if(!(unit==='all'||(mode==='concept'?item.chapterId===unit:item[3].some(tag=>tag.startsWith(unit)))))return false;
+  if(mode!=='concept'||reviewFilter==='all')return true;
+  if(reviewFilter==='unknown')return ratingOf(item)==='unknown';
+  if(reviewFilter==='bookmark')return personal.bookmarks[personalKey(item)]===true;
+  if(reviewFilter==='liked')return personal.likes[personalKey(item)]===true;
+  return false;
+ });
  if(shuffledIds)items.sort((a,b)=>shuffledIds.indexOf(itemId(a))-shuffledIds.indexOf(itemId(b)));
  return items;
 }
@@ -88,7 +135,7 @@ function fillUnits(){
 }
 function openStudy(key){
  if(!subjects[key])return;
- if(subjectKey!==key&&unknownOnly){unknownOnly=false;saveView();}
+ if(subjectKey!==key&&reviewFilter!=='all'){reviewFilter='all';unknownOnly=false;saveView();}
  subjectKey=key;index=0;unit='all';shuffledIds=null;direction='next';gesture=null;
  $('#studyDetail').hidden=true;detailHistoryActive=false;
  $('#home').hidden=true;$('#study').hidden=false;
@@ -96,6 +143,7 @@ function openStudy(key){
  fillUnits();renderStudy();
 }
 function closeStudy(){
+ if(!$('#memoOverlay').hidden){closeMemo(true);return;}
  if(!$('#studyDetail').hidden){closeDetail(true);return;}
  history.replaceState({},'',location.pathname+location.search);
  $('#study').hidden=true;$('#home').hidden=false;renderHome();
@@ -114,7 +162,7 @@ function topicDetail(item){
 }
 function readingTopic(item){
  const sections=item.sections.map(part=>`<section class="detail-section"><h3>${escapeHtml(part.name)}</h3><ul>${part.points.map(point=>`<li>${escapeHtml(point)}</li>`).join('')}</ul></section>`).join('');
- return `<div class="reading-heading"><div class="card-kicker">${escapeHtml(item.chapterId||item.unit)} · 정독 모드</div><h2 class="topic-title">${escapeHtml(item.title)}</h2></div><div class="reading-scroll" tabindex="0" role="region" aria-label="전체 개념 본문"><p class="detail-summary">${escapeHtml(item.summary)}</p>${sections}<section class="detail-trap"><h3>수능 함정</h3><p>${escapeHtml(item.trap)}</p></section><div class="detail-source"><details><summary>출처 보기</summary><p>${(item.sources||[]).map(escapeHtml).join(' · ')}</p></details></div></div>${ratingActions(item)}`;
+ return `<div class="reading-heading"><div class="card-kicker">${escapeHtml(item.chapterId||item.unit)} · 정독 모드</div><h2 class="topic-title">${escapeHtml(item.title)}</h2></div><div class="reading-scroll" tabindex="0" role="region" aria-label="전체 개념 본문"><p class="detail-summary">${escapeHtml(item.summary)}</p>${sections}<section class="detail-trap"><h3>수능 함정</h3><p>${escapeHtml(item.trap)}</p></section><div class="detail-source"><details><summary>출처 보기</summary><p>${(item.sources||[]).map(escapeHtml).join(' · ')}</p></details></div></div>${personalActions(item)}${ratingActions(item)}`;
 }
 function examDetail(item){
  return `<div class="detail-kicker">기출 문항별 복습 · ${item[3].map(escapeHtml).join(' · ')}</div><h2 class="detail-title">${escapeHtml(item[1])}</h2><p class="detail-summary">${escapeHtml(item[2])}</p><section class="detail-trap"><h3>정오 판단 포인트</h3><p>${escapeHtml(item[4]||'')}</p></section><p class="detail-source">문항 원문이 아닌 개념 복습 카드입니다. ${escapeHtml(item[6]||'')}</p>`;
@@ -128,18 +176,21 @@ function renderStudy(){
  updateToolbar();
  gesture=null;
  if(!items.length){
-  $('#cardCounter').textContent=unknownOnly&&mode==='concept'?'0 / 0':'검증 대기';
-  $('#progressText').textContent=unknownOnly&&mode==='concept'?'취약 개념 없음':'공개 콘텐츠 0장';
-  card.innerHTML=unknownOnly&&mode==='concept'?'<div class="feed-main empty-state"><h2>모르는 카드가 없어요!</h2><p>빠른 복습에서 ‘모르겠음’을 표시하거나 위의 ‘모르는 카드만’을 눌러 전체 카드로 돌아갈 수 있어요.</p></div>':'<div class="feed-main"><h2>검증 중인 콘텐츠입니다</h2><p>원본과 대조한 내용만 공개해요.</p></div>';
+  const filtering=mode==='concept'&&reviewFilter!=='all';
+  $('#cardCounter').textContent=filtering?'0 / 0':'검증 대기';
+  $('#progressText').textContent=filtering?'선택 목록에 카드 없음':'공개 콘텐츠 0장';
+  const name={unknown:'모르는 카드',bookmark:'즐겨찾기',liked:'좋아요'}[reviewFilter]||'선택 목록';
+  card.innerHTML=filtering?'<div class="feed-main empty-state"><h2>'+name+'가 없어요.</h2><p>다른 카드에서 표시하거나 위의 복습 목록을 전체 카드로 변경해 주세요.</p></div>':'<div class="feed-main"><h2>검증 중인 콘텐츠입니다</h2><p>원본과 대조한 내용만 공개해요.</p></div>';
   return;
  }
  index=Math.max(0,Math.min(index,items.length-1));
  const item=items[index];
  $('#cardCounter').textContent=`${index+1} / ${items.length}`;
  $('#progressText').textContent=mode==='concept'&&studyView==='reading'?'↕ 본문 · ↔ 카드':'↑ 다음 · ↓ 이전';
- card.innerHTML=mode==='concept'?(studyView==='reading'?readingTopic(item):topicPreview(item)+ratingActions(item)):examPreview(item);
+ card.innerHTML=mode==='concept'?(studyView==='reading'?readingTopic(item):topicPreview(item)+personalActions(item)+ratingActions(item)):examPreview(item);
  card.querySelector('.read-more')?.addEventListener('click',openDetail);
  card.querySelectorAll('.rating-control').forEach(button=>button.onclick=()=>markCurrent(button.dataset.rating));
+ if(mode==='concept')bindPersonal(card);
  persist();
 }
 function move(step){
@@ -157,7 +208,8 @@ function openDetail(){
  if(!$('#studyDetail').hidden)return;
  const item=deck()[index];if(!item)return;
  gesture=null;detailFocusReturn=document.activeElement;
- $('#detailContent').innerHTML=mode==='concept'?topicDetail(item):examDetail(item);
+ $('#detailContent').innerHTML=mode==='concept'?topicDetail(item)+personalActions(item):examDetail(item);
+ if(mode==='concept')bindPersonal($('#detailContent'));
  $('#studyDetail').hidden=false;$('#detailScroll').scrollTop=0;
  $('#detailClose').focus();
  history.pushState({studyDetail:true},'',location.href);
@@ -172,12 +224,101 @@ function closeDetail(goBack){
  if(goBack&&detailHistoryActive&&typeof history.back==='function')history.back();
  detailHistoryActive=false;
 }
+// 카드는 항상 과목+검증된 고유 ID로 연결한다. 개인 기록은 서버로 전송되지 않는다.
+function updatePersonalInView(){
+ const item=currentCard();if(!item||mode!=='concept')return;
+ const key=personalKey(item);
+ for(const target of [$('#studyCard'),$('#detailContent')]){
+  target.querySelectorAll('.personal-control').forEach(button=>{
+   const action=button.dataset.action;
+   const active=action==='like'?personal.likes[key]===true:action==='bookmark'?personal.bookmarks[key]===true:Boolean(personal.notes[key]);
+   button.classList.toggle('active',active&&action!=='note');
+   button.classList.toggle('has-note',active&&action==='note');
+   if(action==='note'){
+    button.innerHTML='<span aria-hidden="true">✎</span> 메모'+(active?' ✓':'');
+    button.setAttribute('aria-label','개인 메모 '+(active?'수정':'작성'));
+   }else{
+    const icon=action==='like'?(active?'♥':'♡'):(active?'★':'☆');
+    const label=action==='like'?'좋아요':'저장';
+    button.innerHTML='<span aria-hidden="true">'+icon+'</span> '+label;
+    button.setAttribute('aria-pressed',String(active));
+    button.setAttribute('aria-label',(action==='like'?'좋아요 ':'즐겨찾기 ')+(active?'해제':'추가'));
+   }
+  });
+ }
+}
+function togglePersonal(kind){
+ if(mode!=='concept'||!['like','bookmark'].includes(kind)||!$('#memoOverlay').hidden)return;
+ const item=currentCard();if(!item)return;
+ const key=personalKey(item),bucket=kind==='like'?personal.likes:personal.bookmarks;
+ const wasSaved=bucket[key]===true;
+ if(wasSaved)delete bucket[key];else bucket[key]=true;
+ if(!savePersonal()){
+  if(wasSaved)bucket[key]=true;else delete bucket[key];
+  return;
+ }
+ const shouldRemove=wasSaved&&((reviewFilter==='liked'&&kind==='like')||(reviewFilter==='bookmark'&&kind==='bookmark'));
+ if(shouldRemove){
+  if(!$('#studyDetail').hidden)closeDetail(true);
+  const available=deck();index=Math.min(index,Math.max(0,available.length-1));renderStudy();
+ }else{
+  updatePersonalInView();updateToolbar();
+ }
+}
+function openMemo(){
+ if(mode!=='concept'||!$('#memoOverlay').hidden)return;
+ const item=currentCard();if(!item)return;
+ memoKey=personalKey(item);
+ memoOriginal=personal.notes[memoKey]||'';
+ memoFocusReturn=document.activeElement;
+ $('#memoTitle').textContent=item.title+' · 개인 메모';
+ $('#memoInput').value=memoOriginal;
+ $('#memoDelete').hidden=!memoOriginal;
+ $('#memoOverlay').hidden=false;
+ gesture=null;
+ $('#memoInput').focus();
+ history.pushState({memo:true},'',location.href);
+ memoHistoryActive=true;
+}
+function closeMemo(goBack){
+ if($('#memoOverlay').hidden)return true;
+ if($('#memoInput').value!==memoOriginal&&typeof window.confirm==='function'&&!window.confirm('저장하지 않은 메모가 있어요. 버릴까요?'))return false;
+ $('#memoOverlay').hidden=true;memoKey=null;gesture=null;
+ if(memoFocusReturn?.isConnected)memoFocusReturn.focus();
+ memoFocusReturn=null;
+ if(goBack&&memoHistoryActive&&typeof history.back==='function'){
+  ignoreNextPop=true;history.back();
+ }
+ memoHistoryActive=false;
+ return true;
+}
+function saveMemo(){
+ if(!memoKey)return;
+ const text=$('#memoInput').value.trim(),previous=personal.notes[memoKey];
+ if(text)personal.notes[memoKey]=text;else delete personal.notes[memoKey];
+ if(!savePersonal()){
+  if(previous===undefined)delete personal.notes[memoKey];else personal.notes[memoKey]=previous;
+  return;
+ }
+ memoOriginal=$('#memoInput').value;
+ closeMemo(true);updatePersonalInView();
+}
+function deleteMemo(){
+ if(!memoKey||!personal.notes[memoKey])return;
+ if(typeof window.confirm==='function'&&!window.confirm('이 카드의 메모를 삭제할까요?'))return;
+ const backup=personal.notes[memoKey];delete personal.notes[memoKey];
+ if(!savePersonal()){personal.notes[memoKey]=backup;return}
+ memoOriginal=$('#memoInput').value;closeMemo(true);updatePersonalInView();
+}
+$('#memoCancel').onclick=()=>closeMemo(true);
+$('#memoSave').onclick=saveMemo;
+$('#memoDelete').onclick=deleteMemo;
 document.querySelectorAll('.tab').forEach(button=>button.onclick=()=>{if(!$('#studyDetail').hidden)return;mode=button.dataset.mode;index=0;unit='all';shuffledIds=null;fillUnits();renderStudy()});
 $('#unitFilter').onchange=e=>{unit=e.target.value;index=0;shuffledIds=null;renderStudy()};
 $('#randomButton').onclick=shuffle;$('#backButton').onclick=closeStudy;
 $('#quickMode').onclick=()=>changeStudyView('quick');
 $('#readingMode').onclick=()=>changeStudyView('reading');
-$('#unknownOnlyButton').onclick=toggleUnknownOnly;
+$('#reviewFilter').onchange=e=>changeReviewFilter(e.target.value);
 $('#previousTopic').onclick=()=>move(-1);$('#nextTopic').onclick=()=>move(1);
 $('#detailClose').onclick=()=>closeDetail(true);
 $('#themeButton').onclick=()=>{
@@ -217,11 +358,17 @@ viewport.addEventListener('touchend',e=>{
 viewport.addEventListener('touchcancel',()=>{gesture=null},{passive:true});
 window.addEventListener('blur',()=>{gesture=null});
 function syncRoute(){
+ if(ignoreNextPop){ignoreNextPop=false;return;}
+ if(!$('#memoOverlay').hidden){
+  if(!closeMemo(false)&&typeof history.pushState==='function')history.pushState({memo:true},'',location.href);
+  return;
+ }
  if(!$('#studyDetail').hidden){closeDetail(false);return;}
  if(!location.hash&&!$('#study').hidden){$('#study').hidden=true;$('#home').hidden=false;renderHome();}
 }
 window.onpopstate=syncRoute;window.onhashchange=syncRoute;
 document.addEventListener('keydown',e=>{
+ if(!$('#memoOverlay').hidden){if(e.key==='Escape'){e.preventDefault();closeMemo(true)}return}
  if(!$('#studyDetail').hidden){if(e.key==='Escape'){e.preventDefault();closeDetail(true)}return}
  if($('#study').hidden)return;
  if(mode==='concept'&&studyView==='reading'){
