@@ -991,7 +991,7 @@ for(const spec of _topicSpecs){
  if(spec.sections?.length&&!spec.sourceComparison)valid=false;
  if(sections.length===0||sections.some(s=>!s.name||!s.points?.length||s.points.some(p=>!p)))valid=false;
  if(!sources.length||!spec.title||!spec.summary||!spec.unit||!spec.trap)valid=false;
- if(valid)_topicDeck[spec.subject].push({id:spec.id,unit:spec.unit,title:spec.title,summary:spec.summary,sections,trap:spec.trap,sources:[...new Set(sources)],status:'verified'});
+ if(valid)_topicDeck[spec.subject].push({id:spec.id,chapterId:spec.chapterId,unit:spec.unit,title:spec.title,summary:spec.summary,sections,trap:spec.trap,sources:[...new Set(sources)],status:'verified'});
 }
 window.v033Topics=_topicDeck;
 window.v034TopicMetadata={version:'V0.3.4',newCards:11,censusBased:true,verifiedOnly:true};
