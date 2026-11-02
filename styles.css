@@ -105,3 +105,51 @@
  .topic-scroll{padding:13px 19px 20px;}
  .study-card .topic-fixed .topic-title{font-size:25px;}
 }
+
+/* V0.4.0 P1 — 메인 쇼츠 피드는 스크롤을 제거하고 한 손가락 세로 스와이프 전용 */
+.study-screen{position:relative;overflow:hidden;}
+.card-viewport{touch-action:none!important;overscroll-behavior:contain!important;overflow:hidden;}
+.study-card.feed-card{
+ height:100%;min-height:0;max-height:100%;width:100%;
+ display:flex;flex-direction:column;justify-content:space-between;
+ padding:24px 23px 20px;gap:14px;
+ overflow:hidden!important;touch-action:none!important;
+ overscroll-behavior:none!important;-webkit-overflow-scrolling:auto!important;
+ animation:none!important;transform:none!important;user-select:none;-webkit-user-select:none;
+}
+.feed-main{min-height:0;overflow:hidden;flex:1 1 auto;display:flex;flex-direction:column;}
+.study-card.feed-card .topic-title{margin:14px 0 10px;font-size:clamp(26px,7.5vw,36px);line-height:1.3;}
+.feed-summary{margin:0 0 15px!important;color:var(--muted);font-size:15px!important;line-height:1.6!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.feed-people{min-height:0;overflow:hidden;border-top:1px solid var(--border);padding-top:4px;}
+.feed-person{padding:12px 0 10px;border-bottom:1px solid var(--border);}
+.feed-person strong{display:block;color:var(--accent);font-size:15px;margin-bottom:5px;}
+.study-card .feed-person p{font-size:14px;line-height:1.6;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.feed-more-count{padding:9px 0 0;font-size:11px!important;color:var(--muted);}
+.read-more{flex-shrink:0;align-self:stretch;border:1px solid var(--border);border-radius:13px;background:var(--soft);color:var(--text);font:inherit;font-weight:750;font-size:14px;min-height:50px;cursor:pointer;touch-action:manipulation;user-select:auto;}
+.read-more:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.detail-overlay{position:absolute;inset:0;z-index:30;display:flex;flex-direction:column;background:var(--bg);overflow:hidden;touch-action:pan-y;}
+.detail-header{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 18px 15px;border-bottom:1px solid var(--border);min-height:66px;}
+.detail-header span{font-size:15px;font-weight:800;}
+.detail-header button{border:1px solid var(--border);border-radius:10px;background:var(--card);color:var(--text);font:inherit;font-size:13px;padding:9px 13px;cursor:pointer;}
+.detail-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;touch-action:pan-y;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch;padding:25px 22px max(28px,env(safe-area-inset-bottom));}
+.detail-content{max-width:650px;margin:auto;}
+.detail-kicker{color:var(--accent);font-size:11px;font-weight:700;}
+.detail-title{font-size:clamp(27px,7.4vw,35px);line-height:1.35;letter-spacing:-.05em;margin:13px 0;}
+.detail-summary{font-size:16px;color:var(--muted);line-height:1.8;margin:0 0 21px;}
+.detail-section{padding:19px 0 13px;border-top:1px solid var(--border);}
+.detail-section h3{margin:0 0 11px;font-size:18px;color:var(--accent);}
+.detail-section ul{margin:0;padding-left:20px;}
+.detail-section li{line-height:1.85;font-size:15px;margin-bottom:10px;}
+.detail-trap{margin-top:14px;border-top:1px solid var(--border);padding-top:19px;}
+.detail-trap h3{font-size:16px;color:var(--accent);margin:0 0 10px;}
+.detail-trap p{line-height:1.8;font-size:14px;}
+.detail-source{margin-top:25px;padding:16px 0;border-top:1px solid var(--border);color:var(--muted);font-size:11px;line-height:1.7;}
+.detail-source summary{cursor:pointer;}
+@media(max-height:700px){
+ .study-card.feed-card{padding:17px 18px 16px;gap:8px;}
+ .feed-person{padding:8px 0;}
+ .feed-person:nth-child(n+3){display:none;}
+ .feed-summary{margin-bottom:8px!important;}
+ .detail-scroll{padding-top:17px;}
+}
+@media(prefers-reduced-motion:reduce){.study-card.feed-card{transition:none!important;animation:none!important;}}
