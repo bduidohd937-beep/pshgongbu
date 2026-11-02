@@ -1,6 +1,6 @@
 {
-  "policyVersion": "V0.3.2",
-  "status": "partial-verified-publication",
+  "policyVersion": "V0.3.4",
+  "status": "verified-topic-expansion-in-progress",
   "allowedSources": [
     "2027 EBS 수능특강 생활과 윤리",
     "2027 EBS 수능특강 사회문화",
@@ -798,5 +798,5 @@
       "public": false
     }
   ],
-  "releaseNote": "기존 미검증 24장 차단 유지. 기출 초안 44장 중 28장은 원문 근거 대조 후 공개, 나머지 16장은 추가 검토 대기."
+  "releaseNote": "기출 문항별 28장 유지. 개념 탭은 별도 topic-audit.json의 검증 카드 28장과 31강 범위 색인으로 운영. 기존 차단 24장·보류 16장 유지."
 }
