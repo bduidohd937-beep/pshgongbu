@@ -27,8 +27,17 @@
  });
  window.addEventListener('appinstalled',()=>{panel.hidden=true;deferred=null;});
  if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(()=>{
-   help.hidden=false;help.textContent='오프라인 저장에 실패했어요. 인터넷 연결 상태에서 다시 열어 주세요.';
+  const alreadyControlled=Boolean(navigator.serviceWorker.controller);
+  let hasRefreshed=false;
+  navigator.serviceWorker.addEventListener('controllerchange',()=>{
+   if(!alreadyControlled||hasRefreshed)return;
+   hasRefreshed=true;
+   window.location.reload();
   });
+  navigator.serviceWorker.register('./sw.js',{scope:'./'})
+   .then(reg=>reg.update().catch(()=>{}))
+   .catch(()=>{
+    help.hidden=false;help.textContent='오프라인 저장에 실패했어요. 인터넷 연결 상태에서 다시 열어 주세요.';
+   });
  }
 })();
