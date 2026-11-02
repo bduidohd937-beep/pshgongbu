@@ -183,3 +183,8 @@
 .empty-state h2{margin:0;}
 @media(max-height:700px){.mode-toolbar{padding-top:5px;gap:5px}.mode-toggle button{padding:7px 3px}.unknown-filter{padding:7px 9px}.study-card.feed-card{padding:14px 16px 12px;gap:6px}.feed-person{padding:6px 0}.read-more{min-height:40px}.rating-control{min-height:39px}.reading-heading{padding:12px 17px}.reading-scroll{padding:14px 17px}.study-card.reading-card>.rating-actions{padding:7px 11px 9px}}
 @media(max-width:345px){.mode-toggle button,.unknown-filter{font-size:11px}.mode-toggle button{padding:8px 2px}.unknown-filter{width:100%}}
+
+/* V0.4.1 작은 화면에서 버튼이 학습 카드 공간을 과도하게 차지하지 않도록 */
+.mode-toggle{flex:1 1 160px;}
+.unknown-filter{flex:0 0 auto;padding:9px 7px;font-size:11px;}
+@media(max-width:345px){.unknown-filter{width:auto;}.mode-toggle button{font-size:10px;}}
