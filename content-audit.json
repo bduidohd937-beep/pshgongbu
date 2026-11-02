@@ -1,31 +1,802 @@
 {
-  "policyVersion": "V0.3.1",
-  "status": "audit-in-progress",
-  "allowedSources": ["2027 EBS 수능특강 생활과 윤리", "2027 EBS 수능특강 사회문화", "2027학년도 평가원 6월·9월 모의평가 문제지 및 정답·해설"],
+  "policyVersion": "V0.3.2",
+  "status": "partial-verified-publication",
+  "allowedSources": [
+    "2027 EBS 수능특강 생활과 윤리",
+    "2027 EBS 수능특강 사회문화",
+    "2027학년도 평가원 6월·9월 모의평가 문제지 및 정답·해설"
+  ],
   "cards": [
-    {"id":"ethics-01","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"ethics-02","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"ethics-03","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"ethics-04","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"ethics-05","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"ethics-06","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"ethics-07","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"ethics-08","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"ethics-09","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"ethics-10","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"ethics-11","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"ethics-12","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"culture-01","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"culture-02","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"culture-03","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"culture-04","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"culture-05","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"culture-06","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"culture-07","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"culture-08","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"culture-09","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"culture-10","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"culture-11","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
-    {"id":"culture-12","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"}
-  ]
+    {
+      "id": "ethics-01",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "ethics-02",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "ethics-03",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "ethics-04",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "ethics-05",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "ethics-06",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "ethics-07",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "ethics-08",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "ethics-09",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "ethics-10",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "ethics-11",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "ethics-12",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "culture-01",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "culture-02",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "culture-03",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "culture-04",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "culture-05",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "culture-06",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "culture-07",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "culture-08",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "culture-09",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "culture-10",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "culture-11",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "culture-12",
+      "status": "blocked",
+      "source": null,
+      "locator": null,
+      "error": "원본 출처·페이지 및 대조 기록 없음"
+    },
+    {
+      "id": "E01",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 1번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 생활과 윤리 · 1번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-1",
+        "E9-1"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "E02",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 5번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-5"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "E03",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 5번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-5"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "E04",
+      "status": "verified",
+      "source": [
+        "2027학년도 9월 모의평가 생활과 윤리 · 17번 (EBS 정답·해설)",
+        "2027학년도 6월 모의평가 생활과 윤리 · 5번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E9-17",
+        "E6-5"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "E05",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 6번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-6"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "E06",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 6번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-6"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "E07",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 10번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-10"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "E08",
+      "status": "verified",
+      "source": [
+        "2027학년도 9월 모의평가 생활과 윤리 · 6번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E9-6"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "E09",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 9번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 생활과 윤리 · 7번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-9",
+        "E9-7"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "E10",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 18번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-18"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "E11",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 11번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 생활과 윤리 · 9번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-11",
+        "E9-9"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "E12",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 11번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-11"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "E13",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 14번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 생활과 윤리 · 11번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-14",
+        "E9-11"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "E14",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 14번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-14"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "E15",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 15번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-15"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "E16",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 19번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 생활과 윤리 · 13번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-19",
+        "E9-13"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "E17",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 19번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-19"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "E18",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 17번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 생활과 윤리 · 14번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-17",
+        "E9-14"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "E19",
+      "status": "verified",
+      "source": [
+        "2027학년도 9월 모의평가 생활과 윤리 · 15번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E9-15"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "E20",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 생활과 윤리 · 3번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 생활과 윤리 · 10번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "E6-3",
+        "E9-10"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "S01",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 1번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 1번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-1",
+        "S9-1"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S02",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 2번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 17번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-2",
+        "S9-17"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S03",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 2번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 17번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-2",
+        "S9-17"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "S04",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 3번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 7번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-3",
+        "S9-7"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S05",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 3번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 7번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-3",
+        "S9-7"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "S06",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 5번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-5"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S07",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 5번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-5"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S08",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 7번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 4번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-7",
+        "S9-4"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "S09",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 7번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-7"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "S10",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 8번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 5번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-8",
+        "S9-5"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "S11",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 9번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 16번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-9",
+        "S9-16"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S12",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 9번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 16번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-9",
+        "S9-16"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "S13",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 15번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 15번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-15",
+        "S9-15"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S14",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 15번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 15번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-15",
+        "S9-15"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "S15",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 6번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-6"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S16",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 16번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 2번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-16",
+        "S9-2"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S17",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 12번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 14번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-12",
+        "S9-14"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S18",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 4번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-4"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S19",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 4번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 11번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-4",
+        "S9-11"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    },
+    {
+      "id": "S20",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 13번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 18번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-13",
+        "S9-18"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S21",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 10번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-10"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S22",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 20번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 20번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-20",
+        "S9-20"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S23",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 18번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-18"
+      ],
+      "sourceComparison": "평가원 문항과 EBS 해당 해설의 핵심 명제를 대조함",
+      "error": null,
+      "public": true
+    },
+    {
+      "id": "S24",
+      "status": "pending",
+      "source": [
+        "2027학년도 6월 모의평가 사회·문화 · 17번 (EBS 정답·해설)",
+        "2027학년도 9월 모의평가 사회·문화 · 12번 (EBS 정답·해설)"
+      ],
+      "locator": [
+        "S6-17",
+        "S9-12"
+      ],
+      "sourceComparison": "문항 위치 확인; 모든 표현의 원문 대조 추가 검토 필요",
+      "error": "검증 게이트 미통과: 공개 차단",
+      "public": false
+    }
+  ],
+  "releaseNote": "기존 미검증 24장 차단 유지. 기출 초안 44장 중 28장은 원문 근거 대조 후 공개, 나머지 16장은 추가 검토 대기."
 }
