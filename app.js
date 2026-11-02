@@ -1,4 +1,4 @@
-// PSH 공부 V0.4.3 — Shorts 전체 화면 빠른 복습 + 정독·개인 기록 보존
+// PSH 공부 V0.4.4 — 상세 읽기 오버레이를 본문 전용으로 수정
 // 학습 콘텐츠는 기존 검증 데이터만 재사용하며 새 주장이나 카드 원문을 추가하지 않는다.
 const subjects={
  ethics:{name:'생활과 윤리',symbol:'◒',description:'사상가 · 윤리 이론',concepts:window.v033Topics.ethics,quizzes:window.v03Content.ethics},
@@ -214,8 +214,8 @@ function openDetail(){
  if(!$('#studyDetail').hidden)return;
  const item=deck()[index];if(!item)return;
  gesture=null;detailFocusReturn=document.activeElement;
- $('#detailContent').innerHTML=mode==='concept'?topicDetail(item)+personalActions(item):examDetail(item);
- if(mode==='concept')bindPersonal($('#detailContent'));
+ $('#detailContent').innerHTML=mode==='concept'?topicDetail(item):examDetail(item);
+// 상세 읽기에서는 쇼츠형 좋아요·메모·저장 UI를 표시하지 않는다.
  $('#studyDetail').hidden=false;$('#detailScroll').scrollTop=0;
  $('#detailClose').focus();
  history.pushState({studyDetail:true},'',location.href);
