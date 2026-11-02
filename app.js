@@ -46,7 +46,7 @@ function changeStudyView(next){
 function toggleUnknownOnly(){
  if(!$('#studyDetail').hidden||mode!=='concept')return;
  const current=deck()[index]?.id;
- unknownOnly=!unknownOnly;gesture=null;saveView();
+ unknownOnly=!unknownOnly;gesture=null;shuffledIds=null;saveView();
  const newIndex=deck().findIndex(item=>item.id===current);
  index=newIndex>=0?newIndex:0;
  renderStudy();
