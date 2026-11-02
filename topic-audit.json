@@ -1,0 +1,300 @@
+{
+  "version": "V0.3.3",
+  "status": "verified-topic-publication",
+  "newTopicCount": 21,
+  "ethics": 9,
+  "culture": 12,
+  "notes": "신규 서술은 EBS 교재 또는 2027 평가원 문제 및 EBS 정답·해설 원문 대조, 다른 주제는 기존 V0.3.2 검증 문장 재배치. 문제 탭은 실제 문제 원문 없이 문항별 개념 복습.",
+  "originalBlockedCardsUnchanged": 24,
+  "remainingPendingCardsUnchanged": 16,
+  "topics": [
+    {
+      "id": "e-death",
+      "subject": "ethics",
+      "unit": "삶과 죽음의 윤리",
+      "title": "유교 · 불교 · 도가의 죽음관",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 생활과 윤리 p.30"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "EBS 2027 생윤 p.30의 죽음에 대한 동양 사상 비교 표와 해당 설명을 대조함",
+      "public": true
+    },
+    {
+      "id": "e-civil",
+      "subject": "ethics",
+      "unit": "국가와 시민의 윤리",
+      "title": "시민 불복종",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 생활과 윤리 p.86~87",
+        "2027학년도 6월 모의평가 생윤 11번 및 EBS 해설"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "EBS 2027 생윤 p.87 시민 불복종 사상가별 입장 표 및 설명을 대조함",
+      "public": true
+    },
+    {
+      "id": "e-nature",
+      "subject": "ethics",
+      "unit": "자연과 윤리",
+      "title": "환경 윤리 · 사상가 7명 비교",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 생활과 윤리 p.114~117",
+        "2027학년도 6월 모의평가 생윤 14번 및 EBS 해설"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "EBS 2027 생윤 p.114~117 자연과 윤리의 사상가별 설명을 대조함",
+      "public": true
+    },
+    {
+      "id": "e-technology",
+      "subject": "ethics",
+      "unit": "과학 기술과 윤리",
+      "title": "요나스 · 책임 윤리",
+      "status": "verified",
+      "source": [],
+      "linkedVerifiedCardIds": [
+        "E02",
+        "E04"
+      ],
+      "sourceComparison": "V0.3.2에서 독립 검증 완료한 카드의 서술문만 재배치",
+      "public": true
+    },
+    {
+      "id": "e-distribution",
+      "subject": "ethics",
+      "unit": "사회 정의와 윤리",
+      "title": "분배 정의와 사회 정의",
+      "status": "verified",
+      "source": [],
+      "linkedVerifiedCardIds": [
+        "E05",
+        "E07",
+        "E08"
+      ],
+      "sourceComparison": "V0.3.2에서 독립 검증 완료한 카드의 서술문만 재배치",
+      "public": true
+    },
+    {
+      "id": "e-penalty",
+      "subject": "ethics",
+      "unit": "사회 정의와 윤리",
+      "title": "형벌의 정당성 · 베카리아",
+      "status": "verified",
+      "source": [],
+      "linkedVerifiedCardIds": [
+        "E09"
+      ],
+      "sourceComparison": "V0.3.2에서 독립 검증 완료한 카드의 서술문만 재배치",
+      "public": true
+    },
+    {
+      "id": "e-peace",
+      "subject": "ethics",
+      "unit": "평화와 공존의 윤리",
+      "title": "칸트 · 영구 평화",
+      "status": "verified",
+      "source": [],
+      "linkedVerifiedCardIds": [
+        "E10"
+      ],
+      "sourceComparison": "V0.3.2에서 독립 검증 완료한 카드의 서술문만 재배치",
+      "public": true
+    },
+    {
+      "id": "e-aid",
+      "subject": "ethics",
+      "unit": "평화와 공존의 윤리",
+      "title": "해외 원조의 윤리",
+      "status": "verified",
+      "source": [],
+      "linkedVerifiedCardIds": [
+        "E17"
+      ],
+      "sourceComparison": "V0.3.2에서 독립 검증 완료한 카드의 서술문만 재배치",
+      "public": true
+    },
+    {
+      "id": "e-ethics-basic",
+      "subject": "ethics",
+      "unit": "현대의 삶과 실천 윤리",
+      "title": "실천 윤리학 · 도덕 판단",
+      "status": "verified",
+      "source": [],
+      "linkedVerifiedCardIds": [
+        "E01",
+        "E15",
+        "E19"
+      ],
+      "sourceComparison": "V0.3.2에서 독립 검증 완료한 카드의 서술문만 재배치",
+      "public": true
+    },
+    {
+      "id": "s-phenomena",
+      "subject": "culture",
+      "unit": "사회·문화 현상의 이해",
+      "title": "사회·문화 현상 vs 자연 현상",
+      "status": "verified",
+      "source": [],
+      "linkedVerifiedCardIds": [
+        "S01"
+      ],
+      "sourceComparison": "V0.3.2에서 독립 검증 완료한 카드의 서술문만 재배치",
+      "public": true
+    },
+    {
+      "id": "s-perspectives",
+      "subject": "culture",
+      "unit": "사회·문화 현상의 이해",
+      "title": "기능론 · 갈등론 · 상징적 상호 작용론",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 사회·문화 p.9~12",
+        "2027학년도 6월 모의평가 사문 2번 및 EBS 해설"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "EBS 2027 사문 p.9~12의 사회·문화 현상 관점 설명과 6모 2번 해설 대조함",
+      "public": true
+    },
+    {
+      "id": "s-deviance",
+      "subject": "culture",
+      "unit": "사회 구조와 일탈 행동",
+      "title": "일탈 이론 · 네 관점 비교",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 사회·문화 p.68",
+        "2027학년도 6월 모의평가 사문 5번 및 EBS 해설"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "EBS 2027 사문 p.68의 일탈 이론 원인·대응 표 및 6모 5번 해설 대조함",
+      "public": true
+    },
+    {
+      "id": "s-bureaucracy",
+      "subject": "culture",
+      "unit": "사회 집단과 사회 조직",
+      "title": "관료제 vs 탈관료제",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사문 3번 및 EBS 해설",
+        "2027학년도 9월 모의평가 사문 7번 및 EBS 해설"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "2027학년도 6모 사문 3번의 공식 문항과 EBS 해설의 관료제·탈관료제 설명을 대조함",
+      "public": true
+    },
+    {
+      "id": "s-research",
+      "subject": "culture",
+      "unit": "사회·문화 현상의 탐구",
+      "title": "사회 조사 · 자료 수집과 연구 방법",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 사회·문화 p.18~20",
+        "2027학년도 6월 모의평가 사문 7~8번 및 EBS 해설"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "EBS 2027 사문 p.18~20의 양적·질적 연구, 조작적 정의 설명과 6모 7~8번 해설 대조함",
+      "public": true
+    },
+    {
+      "id": "s-culture-diffusion",
+      "subject": "culture",
+      "unit": "문화와 일상생활",
+      "title": "문화 변동 · 전파와 접변",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 사회·문화 p.94~95",
+        "2027학년도 6월 모의평가 사문 12번 및 EBS 해설"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "EBS 2027 사문 p.94~95의 문화 변동 요인·문화 접변 결과를 대조함",
+      "public": true
+    },
+    {
+      "id": "s-culture-view",
+      "subject": "culture",
+      "unit": "문화와 일상생활",
+      "title": "문화 이해 · 관점 비교",
+      "status": "verified",
+      "source": [],
+      "linkedVerifiedCardIds": [
+        "S18"
+      ],
+      "sourceComparison": "V0.3.2에서 독립 검증 완료한 카드의 서술문만 재배치",
+      "public": true
+    },
+    {
+      "id": "s-welfare",
+      "subject": "culture",
+      "unit": "사회 불평등과 복지",
+      "title": "빈곤 · 복지 · 계층 구조",
+      "status": "verified",
+      "source": [],
+      "linkedVerifiedCardIds": [
+        "S11",
+        "S13",
+        "S21"
+      ],
+      "sourceComparison": "V0.3.2에서 독립 검증 완료한 카드의 서술문만 재배치",
+      "public": true
+    },
+    {
+      "id": "s-society",
+      "subject": "culture",
+      "unit": "사회 구조와 일탈 행동",
+      "title": "사회 실재론 vs 명목론",
+      "status": "verified",
+      "source": [],
+      "linkedVerifiedCardIds": [
+        "S16"
+      ],
+      "sourceComparison": "V0.3.2에서 독립 검증 완료한 카드의 서술문만 재배치",
+      "public": true
+    },
+    {
+      "id": "s-group",
+      "subject": "culture",
+      "unit": "사회 집단과 사회 조직",
+      "title": "사회 집단 · 사회화 기관",
+      "status": "verified",
+      "source": [],
+      "linkedVerifiedCardIds": [
+        "S15"
+      ],
+      "sourceComparison": "V0.3.2에서 독립 검증 완료한 카드의 서술문만 재배치",
+      "public": true
+    },
+    {
+      "id": "s-socchange",
+      "subject": "culture",
+      "unit": "현대 사회와 사회 변동",
+      "title": "진화론 · 순환론 · 인구 구조",
+      "status": "verified",
+      "source": [],
+      "linkedVerifiedCardIds": [
+        "S20",
+        "S22"
+      ],
+      "sourceComparison": "V0.3.2에서 독립 검증 완료한 카드의 서술문만 재배치",
+      "public": true
+    },
+    {
+      "id": "s-minority",
+      "subject": "culture",
+      "unit": "사회 불평등과 복지",
+      "title": "사회적 소수자와 차별",
+      "status": "verified",
+      "source": [],
+      "linkedVerifiedCardIds": [
+        "S23"
+      ],
+      "sourceComparison": "V0.3.2에서 독립 검증 완료한 카드의 서술문만 재배치",
+      "public": true
+    }
+  ]
+}
