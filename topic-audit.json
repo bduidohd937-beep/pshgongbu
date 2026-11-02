@@ -1,11 +1,11 @@
 {
-  "version": "V0.3.4",
-  "status": "partial-publication",
+  "version": "V0.3.5",
+  "status": "all-31-chapters-have-learning-notes; chapter-detail-audit-pending",
   "chapterTotal": 31,
   "candidateTopicCount": 126,
-  "notes": "31강 126개는 학습 범위 색인으로서 본문 카드 검증 완료가 아님. 신규 주제 비교 카드 11장만 PDF 해당 쪽의 본문 설명과 대조했고 기존 카드는 이전 출처 기록을 승계함. 추가 126개 전수 문장 검수 미완료.",
-  "cardCount": 28,
-  "newlyReviewedCount": 11,
+  "notes": "EBS 수능특강 생윤 15강·사문 16강에 최소 1개 이상의 학습 노트 수록. 신규 92장은 원본 교재 본문의 주요 명제를 독립 재서술한 것. 기본·실전 문항 126개 후보의 각 예외 선지를 전수 검증한 것은 아니며 31강 완성 표시를 하지 않음.",
+  "cardCount": 120,
+  "newlyReviewedCount": 103,
   "chapters": [
     {
       "id": "E01",
@@ -16,9 +16,12 @@
       },
       "candidateTopics": 3,
       "publishedCards": [
+        "v35-e01-01",
+        "v35-e01-02",
+        "v35-e01-03",
         "e-ethics-basic"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -29,8 +32,15 @@
         "end": 22
       },
       "candidateTopics": 4,
-      "publishedCards": [],
-      "status": "partial-or-pending",
+      "publishedCards": [
+        "v35-e02-01",
+        "v35-e02-02",
+        "v35-e02-03",
+        "v35-e02-04",
+        "v35-e02-05",
+        "v35-e02-06"
+      ],
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -42,9 +52,14 @@
       },
       "candidateTopics": 4,
       "publishedCards": [
+        "v35-e03-01",
+        "v35-e03-02",
+        "v35-e03-03",
+        "v35-e03-04",
+        "v35-e03-suicide",
         "e-death"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -55,8 +70,13 @@
         "end": 44
       },
       "candidateTopics": 3,
-      "publishedCards": [],
-      "status": "partial-or-pending",
+      "publishedCards": [
+        "v35-e04-01",
+        "v35-e04-02",
+        "v35-e04-03",
+        "v35-e04-04"
+      ],
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -67,8 +87,14 @@
         "end": 54
       },
       "candidateTopics": 4,
-      "publishedCards": [],
-      "status": "partial-or-pending",
+      "publishedCards": [
+        "v35-e05-01",
+        "v35-e05-02",
+        "v35-e05-03",
+        "v35-e05-04",
+        "v35-e05-05"
+      ],
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -79,8 +105,12 @@
         "end": 63
       },
       "candidateTopics": 4,
-      "publishedCards": [],
-      "status": "partial-or-pending",
+      "publishedCards": [
+        "v35-e06-01",
+        "v35-e06-02",
+        "v35-e06-03"
+      ],
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -92,12 +122,14 @@
       },
       "candidateTopics": 6,
       "publishedCards": [
-        "e07-capital",
+        "v35-e07-b01",
+        "v35-e07-b02",
+        "e07-social",
         "e07-distribution",
         "e07-punishment",
-        "e07-social"
+        "e07-capital"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -109,9 +141,12 @@
       },
       "candidateTopics": 4,
       "publishedCards": [
+        "v35-e08-b01",
+        "v35-e08-b02",
+        "v35-e08-b03",
         "e-civil"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -123,9 +158,11 @@
       },
       "candidateTopics": 4,
       "publishedCards": [
+        "v35-e09-b01",
+        "v35-e09-b02",
         "e-technology"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -136,8 +173,12 @@
         "end": 107
       },
       "candidateTopics": 4,
-      "publishedCards": [],
-      "status": "partial-or-pending",
+      "publishedCards": [
+        "v35-e10-b01",
+        "v35-e10-b02",
+        "v35-e10-b03"
+      ],
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -149,9 +190,12 @@
       },
       "candidateTopics": 6,
       "publishedCards": [
+        "v35-e11-b01",
+        "v35-e11-b02",
+        "v35-e11-b03",
         "e-nature"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -162,8 +206,13 @@
         "end": 131
       },
       "candidateTopics": 5,
-      "publishedCards": [],
-      "status": "partial-or-pending",
+      "publishedCards": [
+        "v35-e12-b01",
+        "v35-e12-b02",
+        "v35-e12-b03",
+        "v35-e12-b04"
+      ],
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -174,8 +223,13 @@
         "end": 142
       },
       "candidateTopics": 4,
-      "publishedCards": [],
-      "status": "partial-or-pending",
+      "publishedCards": [
+        "v35-e13-b01",
+        "v35-e13-b02",
+        "v35-e13-b03",
+        "v35-e13-b04"
+      ],
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -186,8 +240,12 @@
         "end": 152
       },
       "candidateTopics": 4,
-      "publishedCards": [],
-      "status": "partial-or-pending",
+      "publishedCards": [
+        "v35-e14-b01",
+        "v35-e14-b02",
+        "v35-e14-b03"
+      ],
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -199,11 +257,12 @@
       },
       "candidateTopics": 5,
       "publishedCards": [
-        "e15-aid",
+        "v35-e15-b01",
+        "e15-international",
         "e15-galtung",
-        "e15-international"
+        "e15-aid"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -215,10 +274,12 @@
       },
       "candidateTopics": 3,
       "publishedCards": [
-        "s-perspectives",
-        "s-phenomena"
+        "v35-s01-01",
+        "v35-s01-02",
+        "s-phenomena",
+        "s-perspectives"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -230,9 +291,11 @@
       },
       "candidateTopics": 3,
       "publishedCards": [
+        "v35-s02-01",
+        "v35-s02-02",
         "s-research"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -244,9 +307,10 @@
       },
       "candidateTopics": 6,
       "publishedCards": [
+        "v35-s03-01",
         "s03-methods"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -257,8 +321,12 @@
         "end": 40
       },
       "candidateTopics": 3,
-      "publishedCards": [],
-      "status": "partial-or-pending",
+      "publishedCards": [
+        "v35-s04-01",
+        "v35-s04-02",
+        "v35-s04-03"
+      ],
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -269,8 +337,12 @@
         "end": 48
       },
       "candidateTopics": 3,
-      "publishedCards": [],
-      "status": "partial-or-pending",
+      "publishedCards": [
+        "v35-s05-01",
+        "v35-s05-02",
+        "v35-s05-03"
+      ],
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -282,10 +354,12 @@
       },
       "candidateTopics": 5,
       "publishedCards": [
-        "s-bureaucracy",
-        "s-group"
+        "v35-s06-01",
+        "v35-s06-02",
+        "s-group",
+        "s-bureaucracy"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -297,10 +371,13 @@
       },
       "candidateTopics": 4,
       "publishedCards": [
-        "s-deviance",
-        "s-society"
+        "v35-s07-01",
+        "v35-s07-02",
+        "v35-s07-03",
+        "s-society",
+        "s-deviance"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -312,9 +389,12 @@
       },
       "candidateTopics": 4,
       "publishedCards": [
+        "v35-s08-01",
+        "v35-s08-02",
+        "v35-s08-03",
         "s-culture-view"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -325,8 +405,12 @@
         "end": 88
       },
       "candidateTopics": 3,
-      "publishedCards": [],
-      "status": "partial-or-pending",
+      "publishedCards": [
+        "v35-s09-b01",
+        "v35-s09-b02",
+        "v35-s09-b03"
+      ],
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -338,9 +422,12 @@
       },
       "candidateTopics": 4,
       "publishedCards": [
+        "v35-s10-b01",
+        "v35-s10-b02",
+        "v35-s10-b03",
         "s-culture-diffusion"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -352,9 +439,11 @@
       },
       "candidateTopics": 3,
       "publishedCards": [
+        "v35-s11-b01",
+        "v35-s11-b02",
         "s11-class"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -366,9 +455,11 @@
       },
       "candidateTopics": 4,
       "publishedCards": [
+        "v35-s12-b01",
+        "v35-s12-b02",
         "s12-mobility"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -380,9 +471,12 @@
       },
       "candidateTopics": 4,
       "publishedCards": [
+        "v35-s13-b01",
+        "v35-s13-b02",
+        "v35-s13-b03",
         "s-minority"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -394,9 +488,11 @@
       },
       "candidateTopics": 4,
       "publishedCards": [
+        "v35-s14-b01",
+        "v35-s14-b02",
         "s14-welfare"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -408,9 +504,12 @@
       },
       "candidateTopics": 4,
       "publishedCards": [
+        "v35-s15-b01",
+        "v35-s15-b02",
+        "v35-s15-b03",
         "s-socchange"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     },
     {
@@ -422,224 +521,66 @@
       },
       "candidateTopics": 5,
       "publishedCards": [
+        "v35-s16-b01",
+        "v35-s16-b02",
+        "v35-s16-b03",
+        "v35-s16-b04",
         "s16-demography"
       ],
-      "status": "partial-or-pending",
+      "status": "learning-notes-available; detailed-question-review-pending",
       "complete": false
     }
   ],
   "topics": [
     {
-      "id": "s-perspectives",
-      "chapterId": "S01",
-      "subject": "culture",
-      "title": "기능론 · 갈등론 · 상징적 상호 작용론",
+      "id": "v35-e01-01",
+      "chapterId": "E01",
+      "subject": "ethics",
+      "title": "윤리학의 네 갈래",
       "status": "verified",
       "source": [
-        "2027 EBS 수능특강 사회·문화 p.9~12",
-        "2027학년도 6월 모의평가 사문 2번 및 EBS 해설"
+        "2027학년도 EBS 수능특강 생활과 윤리 7쪽"
       ],
-      "linkedVerifiedCardIds": [],
-      "sourceComparison": "EBS 2027 사문 p.9~12의 사회·문화 현상 관점 설명과 6모 2번 해설 대조함",
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 7쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "7쪽"
+      },
+      "provenanceType": "EBS-source-checked",
       "public": true
     },
     {
-      "id": "s-phenomena",
-      "chapterId": "S01",
-      "subject": "culture",
-      "title": "사회·문화 현상 vs 자연 현상",
-      "status": "verified",
-      "source": [],
-      "linkedVerifiedCardIds": [
-        "S01"
-      ],
-      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
-      "public": true
-    },
-    {
-      "id": "s-research",
-      "chapterId": "S02",
-      "subject": "culture",
-      "title": "사회 조사 · 자료 수집과 연구 방법",
+      "id": "v35-e01-02",
+      "chapterId": "E01",
+      "subject": "ethics",
+      "title": "도덕적 추론과 보편화 검사",
       "status": "verified",
       "source": [
-        "2027 EBS 수능특강 사회·문화 p.18~20",
-        "2027학년도 6월 모의평가 사문 7~8번 및 EBS 해설"
+        "2027학년도 EBS 수능특강 생활과 윤리 8쪽"
       ],
-      "linkedVerifiedCardIds": [],
-      "sourceComparison": "EBS 2027 사문 p.18~20의 양적·질적 연구, 조작적 정의 설명과 6모 7~8번 해설 대조함",
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 8쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "8쪽"
+      },
+      "provenanceType": "EBS-source-checked",
       "public": true
     },
     {
-      "id": "s03-methods",
-      "chapterId": "S03",
-      "subject": "culture",
-      "title": "자료 수집 방법 · 5가지 비교",
+      "id": "v35-e01-03",
+      "chapterId": "E01",
+      "subject": "ethics",
+      "title": "윤리적 성찰과 토론",
       "status": "verified",
       "source": [
-        "2027 EBS 수능특강 사회·문화 28~30쪽"
+        "2027학년도 EBS 수능특강 생활과 윤리 9~10쪽"
       ],
-      "linkedVerifiedCardIds": [],
-      "sourceComparison": "사문 교재 28~30쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
-      "public": true
-    },
-    {
-      "id": "s-bureaucracy",
-      "chapterId": "S06",
-      "subject": "culture",
-      "title": "관료제 vs 탈관료제",
-      "status": "verified",
-      "source": [
-        "2027학년도 6월 모의평가 사문 3번 및 EBS 해설",
-        "2027학년도 9월 모의평가 사문 7번 및 EBS 해설"
-      ],
-      "linkedVerifiedCardIds": [],
-      "sourceComparison": "2027학년도 6모 사문 3번의 공식 문항과 EBS 해설의 관료제·탈관료제 설명을 대조함",
-      "public": true
-    },
-    {
-      "id": "s-group",
-      "chapterId": "S06",
-      "subject": "culture",
-      "title": "사회 집단 · 사회화 기관",
-      "status": "verified",
-      "source": [],
-      "linkedVerifiedCardIds": [
-        "S15"
-      ],
-      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
-      "public": true
-    },
-    {
-      "id": "s-deviance",
-      "chapterId": "S07",
-      "subject": "culture",
-      "title": "일탈 이론 · 네 관점 비교",
-      "status": "verified",
-      "source": [
-        "2027 EBS 수능특강 사회·문화 p.68",
-        "2027학년도 6월 모의평가 사문 5번 및 EBS 해설"
-      ],
-      "linkedVerifiedCardIds": [],
-      "sourceComparison": "EBS 2027 사문 p.68의 일탈 이론 원인·대응 표 및 6모 5번 해설 대조함",
-      "public": true
-    },
-    {
-      "id": "s-society",
-      "chapterId": "S07",
-      "subject": "culture",
-      "title": "사회 실재론 vs 명목론",
-      "status": "verified",
-      "source": [],
-      "linkedVerifiedCardIds": [
-        "S16"
-      ],
-      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
-      "public": true
-    },
-    {
-      "id": "s-culture-view",
-      "chapterId": "S08",
-      "subject": "culture",
-      "title": "문화 이해 · 관점 비교",
-      "status": "verified",
-      "source": [],
-      "linkedVerifiedCardIds": [
-        "S18"
-      ],
-      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
-      "public": true
-    },
-    {
-      "id": "s-culture-diffusion",
-      "chapterId": "S10",
-      "subject": "culture",
-      "title": "문화 변동 · 전파와 접변",
-      "status": "verified",
-      "source": [
-        "2027 EBS 수능특강 사회·문화 p.94~95",
-        "2027학년도 6월 모의평가 사문 12번 및 EBS 해설"
-      ],
-      "linkedVerifiedCardIds": [],
-      "sourceComparison": "EBS 2027 사문 p.94~95의 문화 변동 요인·문화 접변 결과를 대조함",
-      "public": true
-    },
-    {
-      "id": "s11-class",
-      "chapterId": "S11",
-      "subject": "culture",
-      "title": "마르크스 계급론 vs 베버 계층론",
-      "status": "verified",
-      "source": [
-        "2027 EBS 수능특강 사회·문화 104~106쪽"
-      ],
-      "linkedVerifiedCardIds": [],
-      "sourceComparison": "사문 교재 104~106쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
-      "public": true
-    },
-    {
-      "id": "s12-mobility",
-      "chapterId": "S12",
-      "subject": "culture",
-      "title": "사회 이동과 계층 구조",
-      "status": "verified",
-      "source": [
-        "2027 EBS 수능특강 사회·문화 112~114쪽"
-      ],
-      "linkedVerifiedCardIds": [],
-      "sourceComparison": "사문 교재 112~114쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
-      "public": true
-    },
-    {
-      "id": "s-minority",
-      "chapterId": "S13",
-      "subject": "culture",
-      "title": "사회적 소수자와 차별",
-      "status": "verified",
-      "source": [],
-      "linkedVerifiedCardIds": [
-        "S23"
-      ],
-      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
-      "public": true
-    },
-    {
-      "id": "s14-welfare",
-      "chapterId": "S14",
-      "subject": "culture",
-      "title": "사회 보장 제도 · 3가지 비교",
-      "status": "verified",
-      "source": [
-        "2027 EBS 수능특강 사회·문화 130~132쪽"
-      ],
-      "linkedVerifiedCardIds": [],
-      "sourceComparison": "사문 교재 130~132쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
-      "public": true
-    },
-    {
-      "id": "s-socchange",
-      "chapterId": "S15",
-      "subject": "culture",
-      "title": "사회 변동 이론 · 진화론과 순환론",
-      "status": "verified",
-      "source": [],
-      "linkedVerifiedCardIds": [
-        "S20"
-      ],
-      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
-      "public": true
-    },
-    {
-      "id": "s16-demography",
-      "chapterId": "S16",
-      "subject": "culture",
-      "title": "인구 구조 · 노령화 지수와 부양비",
-      "status": "verified",
-      "source": [],
-      "linkedVerifiedCardIds": [
-        "S22"
-      ],
-      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 9~10쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "9~10쪽"
+      },
+      "provenanceType": "EBS-source-checked",
       "public": true
     },
     {
@@ -648,11 +589,201 @@
       "subject": "ethics",
       "title": "실천 윤리학의 탐구 과제",
       "status": "verified",
-      "source": [],
+      "source": [
+        "2027학년도 6월 모의평가 s_생활과윤리 정답,해설.pdf · 1번",
+        "2027학년도 9월 모의평가_s 생활과윤리 정답,해설.pdf · 1번"
+      ],
       "linkedVerifiedCardIds": [
         "E01"
       ],
       "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
+      "public": true
+    },
+    {
+      "id": "v35-e02-01",
+      "chapterId": "E02",
+      "subject": "ethics",
+      "title": "유교 윤리 · 공자와 맹자",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 17~18쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 17~18쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "17~18쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e02-02",
+      "chapterId": "E02",
+      "subject": "ethics",
+      "title": "불교 윤리 · 연기·중도·보살",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 18쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 18쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "18쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e02-03",
+      "chapterId": "E02",
+      "subject": "ethics",
+      "title": "도가 윤리 · 노자와 장자",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 19쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 19쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "19쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e02-04",
+      "chapterId": "E02",
+      "subject": "ethics",
+      "title": "의무론 · 아퀴나스와 칸트",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 20쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 20쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "20쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e02-05",
+      "chapterId": "E02",
+      "subject": "ethics",
+      "title": "공리주의 · 벤담과 밀",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 21쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 21쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "21쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e02-06",
+      "chapterId": "E02",
+      "subject": "ethics",
+      "title": "덕 윤리와 도덕 과학적 접근",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 22쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 22쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "22쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e03-01",
+      "chapterId": "E03",
+      "subject": "ethics",
+      "title": "서양 사상가의 죽음관",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 31쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 31쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "31쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e03-02",
+      "chapterId": "E03",
+      "subject": "ethics",
+      "title": "인공 임신 중절의 윤리",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 31~32쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 31~32쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "31~32쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e03-03",
+      "chapterId": "E03",
+      "subject": "ethics",
+      "title": "안락사의 유형과 쟁점",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 33쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 33쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "33쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e03-04",
+      "chapterId": "E03",
+      "subject": "ethics",
+      "title": "뇌사와 심폐사의 판단",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 34쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 34쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "34쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e03-suicide",
+      "chapterId": "E03",
+      "subject": "ethics",
+      "title": "자살의 윤리적 쟁점 · 사상별 입장",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 32쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수특 생윤 32쪽 자살에 대한 유교·불교·자연법·칸트·쇼펜하우어 설명 직접 확인·재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "32쪽"
+      },
+      "provenanceType": "EBS-source-checked",
       "public": true
     },
     {
@@ -669,16 +800,254 @@
       "public": true
     },
     {
-      "id": "e07-capital",
-      "chapterId": "E07",
+      "id": "v35-e04-01",
+      "chapterId": "E04",
       "subject": "ethics",
-      "title": "사형 제도 · 칸트·루소·베카리아",
+      "title": "생명 의료 윤리의 네 원칙",
       "status": "verified",
       "source": [
-        "2027 EBS 수능특강 생활과 윤리 75쪽"
+        "2027학년도 EBS 수능특강 생활과 윤리 41쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 41쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "41쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e04-02",
+      "chapterId": "E04",
+      "subject": "ethics",
+      "title": "생명 복제와 배아의 윤리",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 41~42쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 41~42쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "41~42쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e04-03",
+      "chapterId": "E04",
+      "subject": "ethics",
+      "title": "유전자 치료 · 체세포와 생식 세포",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 42쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 42쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "42쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e04-04",
+      "chapterId": "E04",
+      "subject": "ethics",
+      "title": "동물 권리 · 코헨·칸트·싱어·레건",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 43~44쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 43~44쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "43~44쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e05-01",
+      "chapterId": "E05",
+      "subject": "ethics",
+      "title": "사랑의 요소 · 프롬",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 51쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 51쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "51쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e05-02",
+      "chapterId": "E05",
+      "subject": "ethics",
+      "title": "사랑과 성 · 보수·중도·자유주의",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 52쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 52쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "52쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e05-03",
+      "chapterId": "E05",
+      "subject": "ethics",
+      "title": "성차별·배려 윤리 · 보부아르·길리건·나딩스",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 52~53쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 52~53쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "52~53쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e05-04",
+      "chapterId": "E05",
+      "subject": "ethics",
+      "title": "성의 자기 결정권과 성 상품화",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 53쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 53쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "53쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e05-05",
+      "chapterId": "E05",
+      "subject": "ethics",
+      "title": "부부와 가족의 윤리",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 54쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 54쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "54쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e06-01",
+      "chapterId": "E06",
+      "subject": "ethics",
+      "title": "동서양 직업관 · 플라톤·칼뱅·베버·마르크스",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 60쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 60쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "60쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e06-02",
+      "chapterId": "E06",
+      "subject": "ethics",
+      "title": "기업과 근로자의 윤리",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 61~62쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 61~62쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "61~62쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e06-03",
+      "chapterId": "E06",
+      "subject": "ethics",
+      "title": "전문직·공직자의 윤리와 청렴",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 63쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 63쪽의 개념 설명과 주요 판단 기준을 대조해 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "63쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e07-b01",
+      "chapterId": "E07",
+      "subject": "ethics",
+      "title": "정의의 종류와 분배 기준",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 71~72쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 71~72쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "71~72쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e07-b02",
+      "chapterId": "E07",
+      "subject": "ethics",
+      "title": "우대 정책과 부유세의 쟁점",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 73~74쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 73~74쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "73~74쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "e07-social",
+      "chapterId": "E07",
+      "subject": "ethics",
+      "title": "개인 윤리와 사회 윤리",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 생활과 윤리 70~71쪽"
       ],
       "linkedVerifiedCardIds": [],
-      "sourceComparison": "생윤 교재 75쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
+      "sourceComparison": "생윤 교재 70~71쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
       "public": true
     },
     {
@@ -708,16 +1077,67 @@
       "public": true
     },
     {
-      "id": "e07-social",
+      "id": "e07-capital",
       "chapterId": "E07",
       "subject": "ethics",
-      "title": "개인 윤리와 사회 윤리",
+      "title": "사형 제도 · 칸트·루소·베카리아",
       "status": "verified",
       "source": [
-        "2027 EBS 수능특강 생활과 윤리 70~71쪽"
+        "2027 EBS 수능특강 생활과 윤리 75쪽"
       ],
       "linkedVerifiedCardIds": [],
-      "sourceComparison": "생윤 교재 70~71쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
+      "sourceComparison": "생윤 교재 75쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
+      "public": true
+    },
+    {
+      "id": "v35-e08-b01",
+      "chapterId": "E08",
+      "subject": "ethics",
+      "title": "국가 권위와 정당성 · 사회 계약",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 83~85쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 83~85쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "83~85쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e08-b02",
+      "chapterId": "E08",
+      "subject": "ethics",
+      "title": "국가의 의무 · 동양과 서양",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 84~85쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 84~85쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "84~85쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e08-b03",
+      "chapterId": "E08",
+      "subject": "ethics",
+      "title": "민주 시민의 참여와 권리",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 85~86쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 85~86쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "85~86쪽"
+      },
+      "provenanceType": "EBS-source-checked",
       "public": true
     },
     {
@@ -735,17 +1155,156 @@
       "public": true
     },
     {
+      "id": "v35-e09-b01",
+      "chapterId": "E09",
+      "subject": "ethics",
+      "title": "과학 기술의 가치 중립성 논쟁",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 94~95쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 94~95쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "94~95쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e09-b02",
+      "chapterId": "E09",
+      "subject": "ethics",
+      "title": "과학 기술자의 책임과 요나스",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 96~97쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 96~97쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "96~97쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
       "id": "e-technology",
       "chapterId": "E09",
       "subject": "ethics",
       "title": "요나스 · 책임 윤리",
       "status": "verified",
-      "source": [],
+      "source": [
+        "2027학년도 6월 모의평가 s_생활과윤리 정답,해설.pdf · 5번",
+        "2027학년도 9월 모의평가_s 생활과윤리 정답,해설.pdf · 17번"
+      ],
       "linkedVerifiedCardIds": [
         "E02",
         "E04"
       ],
       "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
+      "public": true
+    },
+    {
+      "id": "v35-e10-b01",
+      "chapterId": "E10",
+      "subject": "ethics",
+      "title": "정보 사회의 순기능과 감시 문제",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 104쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 104쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "104쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e10-b02",
+      "chapterId": "E10",
+      "subject": "ethics",
+      "title": "저작권·사이버 폭력·표현의 자유",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 105쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 105쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "105쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e10-b03",
+      "chapterId": "E10",
+      "subject": "ethics",
+      "title": "뉴 미디어와 미디어 리터러시",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 106~107쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 106~107쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "106~107쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e11-b01",
+      "chapterId": "E11",
+      "subject": "ethics",
+      "title": "인간 중심주의 · 아리스토텔레스에서 칸트",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 114~115쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 114~115쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "114~115쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e11-b02",
+      "chapterId": "E11",
+      "subject": "ethics",
+      "title": "동양 자연관 · 유교·불교·도가",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 117~118쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 117~118쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "117~118쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e11-b03",
+      "chapterId": "E11",
+      "subject": "ethics",
+      "title": "기후 변화·지속 가능한 발전·미래 책임",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 118~119쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 118~119쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "118~119쪽"
+      },
+      "provenanceType": "EBS-source-checked",
       "public": true
     },
     {
@@ -763,16 +1322,220 @@
       "public": true
     },
     {
-      "id": "e15-aid",
-      "chapterId": "E15",
+      "id": "v35-e12-b01",
+      "chapterId": "E12",
       "subject": "ethics",
-      "title": "해외 원조 · 노직·싱어·롤스",
+      "title": "예술의 도덕주의 · 플라톤과 톨스토이",
       "status": "verified",
       "source": [
-        "2027 EBS 수능특강 생활과 윤리 161~162쪽"
+        "2027학년도 EBS 수능특강 생활과 윤리 127~128쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 127~128쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "127~128쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e12-b02",
+      "chapterId": "E12",
+      "subject": "ethics",
+      "title": "예술 지상주의 · 와일드",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 128쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 128쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "128쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e12-b03",
+      "chapterId": "E12",
+      "subject": "ethics",
+      "title": "칸트의 미와 도덕·참여 예술",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 129~130쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 129~130쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "129~130쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e12-b04",
+      "chapterId": "E12",
+      "subject": "ethics",
+      "title": "대중문화와 문화 산업 · 아도르노",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 130~131쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 130~131쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "130~131쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e13-b01",
+      "chapterId": "E13",
+      "subject": "ethics",
+      "title": "의복·식생활·주거의 윤리",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 138~139쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 138~139쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "138~139쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e13-b02",
+      "chapterId": "E13",
+      "subject": "ethics",
+      "title": "과시 소비·기호 소비와 윤리적 소비",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 139~140쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 139~140쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "139~140쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e13-b03",
+      "chapterId": "E13",
+      "subject": "ethics",
+      "title": "다문화 사회의 관용과 존중",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 141쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 141쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "141쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e13-b04",
+      "chapterId": "E13",
+      "subject": "ethics",
+      "title": "종교의 본질과 공존 · 엘리아데",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 141~142쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 141~142쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "141~142쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e14-b01",
+      "chapterId": "E14",
+      "subject": "ethics",
+      "title": "사회 갈등의 원인과 사회 통합",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 149~150쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 149~150쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "149~150쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e14-b02",
+      "chapterId": "E14",
+      "subject": "ethics",
+      "title": "소통의 윤리 · 원효·공자·하버마스",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 150~151쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 150~151쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "150~151쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e14-b03",
+      "chapterId": "E14",
+      "subject": "ethics",
+      "title": "통일의 정당성과 비용 구조",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 151~152쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 151~152쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "151~152쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-e15-b01",
+      "chapterId": "E15",
+      "subject": "ethics",
+      "title": "세계화·국제 정의와 책임",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 생활과 윤리 161쪽"
+      ],
+      "sourceComparison": "사용자 제공 2027 수능특강 생윤 161쪽 교재 설명·표·예시 대조 후 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능특강 생활과 윤리 1.pdf",
+        "pages": "161쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "e15-international",
+      "chapterId": "E15",
+      "subject": "ethics",
+      "title": "국제 관계 · 모겐소와 칸트",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 생활과 윤리 159~160쪽·163쪽 수능 기본 문제 1번"
       ],
       "linkedVerifiedCardIds": [],
-      "sourceComparison": "생윤 교재 161~162쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
+      "sourceComparison": "생윤 교재 159~160쪽·163쪽 수능 기본 문제 1번의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
       "public": true
     },
     {
@@ -789,16 +1552,944 @@
       "public": true
     },
     {
-      "id": "e15-international",
+      "id": "e15-aid",
       "chapterId": "E15",
       "subject": "ethics",
-      "title": "국제 관계 · 모겐소와 칸트",
+      "title": "해외 원조 · 노직·싱어·롤스",
       "status": "verified",
       "source": [
-        "2027 EBS 수능특강 생활과 윤리 159~160쪽·163쪽 수능 기본 문제 1번"
+        "2027 EBS 수능특강 생활과 윤리 161~162쪽"
       ],
       "linkedVerifiedCardIds": [],
-      "sourceComparison": "생윤 교재 159~160쪽·163쪽 수능 기본 문제 1번의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
+      "sourceComparison": "생윤 교재 161~162쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
+      "public": true
+    },
+    {
+      "id": "v35-s01-01",
+      "chapterId": "S01",
+      "subject": "culture",
+      "title": "사회·문화 현상과 자연 현상",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 8쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 8쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "8쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s01-02",
+      "chapterId": "S01",
+      "subject": "culture",
+      "title": "세 관점으로 제시문 분류하기",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 9~10쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 9~10쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "9~10쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "s-phenomena",
+      "chapterId": "S01",
+      "subject": "culture",
+      "title": "사회·문화 현상 vs 자연 현상",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 s_사회문화 정답,해설.pdf · 1번",
+        "2027학년도 9월 모의평가_s 사회문화 정답,해설.pdf · 1번"
+      ],
+      "linkedVerifiedCardIds": [
+        "S01"
+      ],
+      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
+      "public": true
+    },
+    {
+      "id": "s-perspectives",
+      "chapterId": "S01",
+      "subject": "culture",
+      "title": "기능론 · 갈등론 · 상징적 상호 작용론",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 사회·문화 p.9~12",
+        "2027학년도 6월 모의평가 사문 2번 및 EBS 해설"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "EBS 2027 사문 p.9~12의 사회·문화 현상 관점 설명과 6모 2번 해설 대조함",
+      "public": true
+    },
+    {
+      "id": "v35-s02-01",
+      "chapterId": "S02",
+      "subject": "culture",
+      "title": "양적 연구의 절차와 가설",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 18~19쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 18~19쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "18~19쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s02-02",
+      "chapterId": "S02",
+      "subject": "culture",
+      "title": "질적 연구와 양적 연구의 상호 보완",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 19~20쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 19~20쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "19~20쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "s-research",
+      "chapterId": "S02",
+      "subject": "culture",
+      "title": "사회 조사 · 자료 수집과 연구 방법",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 사회·문화 p.18~20",
+        "2027학년도 6월 모의평가 사문 7~8번 및 EBS 해설"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "EBS 2027 사문 p.18~20의 양적·질적 연구, 조작적 정의 설명과 6모 7~8번 해설 대조함",
+      "public": true
+    },
+    {
+      "id": "v35-s03-01",
+      "chapterId": "S03",
+      "subject": "culture",
+      "title": "표본과 연구 설계의 함정",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 28~30쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 28~30쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "28~30쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "s03-methods",
+      "chapterId": "S03",
+      "subject": "culture",
+      "title": "자료 수집 방법 · 5가지 비교",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 사회·문화 28~30쪽"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "사문 교재 28~30쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
+      "public": true
+    },
+    {
+      "id": "v35-s04-01",
+      "chapterId": "S04",
+      "subject": "culture",
+      "title": "연구자의 네 탐구 태도",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 38~39쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 38~39쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "38~39쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s04-02",
+      "chapterId": "S04",
+      "subject": "culture",
+      "title": "가치 중립과 가치 개입",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 39~40쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 39~40쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "39~40쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s04-03",
+      "chapterId": "S04",
+      "subject": "culture",
+      "title": "사회 조사와 연구 윤리",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 40쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 40쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "40쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s05-01",
+      "chapterId": "S05",
+      "subject": "culture",
+      "title": "사회화와 사회화 기관",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 46~47쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 46~47쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "46~47쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s05-02",
+      "chapterId": "S05",
+      "subject": "culture",
+      "title": "예기 사회화와 재사회화",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 47쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 47쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "47쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s05-03",
+      "chapterId": "S05",
+      "subject": "culture",
+      "title": "지위·역할·역할 갈등",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 47~48쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 47~48쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "47~48쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s06-01",
+      "chapterId": "S06",
+      "subject": "culture",
+      "title": "쿨리·퇴니에스·섬너의 집단 분류",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 56~57쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 56~57쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "56~57쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s06-02",
+      "chapterId": "S06",
+      "subject": "culture",
+      "title": "공식 조직·비공식 조직·자발적 결사체",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 57~58쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 57~58쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "57~58쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "s-group",
+      "chapterId": "S06",
+      "subject": "culture",
+      "title": "사회 집단 · 사회화 기관",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 s_사회문화 정답,해설.pdf · 6번"
+      ],
+      "linkedVerifiedCardIds": [
+        "S15"
+      ],
+      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
+      "public": true
+    },
+    {
+      "id": "s-bureaucracy",
+      "chapterId": "S06",
+      "subject": "culture",
+      "title": "관료제 vs 탈관료제",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 사문 3번 및 EBS 해설",
+        "2027학년도 9월 모의평가 사문 7번 및 EBS 해설"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "2027학년도 6모 사문 3번의 공식 문항과 EBS 해설의 관료제·탈관료제 설명을 대조함",
+      "public": true
+    },
+    {
+      "id": "v35-s07-01",
+      "chapterId": "S07",
+      "subject": "culture",
+      "title": "사회 실재론 vs 사회 명목론",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 66쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 66쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "66쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s07-02",
+      "chapterId": "S07",
+      "subject": "culture",
+      "title": "사회 구조의 지속성과 변동성",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 67쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 67쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "67쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s07-03",
+      "chapterId": "S07",
+      "subject": "culture",
+      "title": "일탈 행동의 상대성과 2차적 일탈",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 68쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 68쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "68쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "s-society",
+      "chapterId": "S07",
+      "subject": "culture",
+      "title": "사회 실재론 vs 명목론",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 s_사회문화 정답,해설.pdf · 16번",
+        "2027학년도 9월 모의평가_s 사회문화 정답,해설.pdf · 2번"
+      ],
+      "linkedVerifiedCardIds": [
+        "S16"
+      ],
+      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
+      "public": true
+    },
+    {
+      "id": "s-deviance",
+      "chapterId": "S07",
+      "subject": "culture",
+      "title": "일탈 이론 · 네 관점 비교",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 사회·문화 p.68",
+        "2027학년도 6월 모의평가 사문 5번 및 EBS 해설"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "EBS 2027 사문 p.68의 일탈 이론 원인·대응 표 및 6모 5번 해설 대조함",
+      "public": true
+    },
+    {
+      "id": "v35-s08-01",
+      "chapterId": "S08",
+      "subject": "culture",
+      "title": "문화의 의미와 다섯 속성",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 76~77쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 76~77쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "76~77쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s08-02",
+      "chapterId": "S08",
+      "subject": "culture",
+      "title": "총체론·비교론·상대론의 관점",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 77쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 77쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "77쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s08-03",
+      "chapterId": "S08",
+      "subject": "culture",
+      "title": "문화 이해 태도 · 자문화·사대·상대주의",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 78쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 78쪽 교재 설명·비교표와 대조 후 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "78쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "s-culture-view",
+      "chapterId": "S08",
+      "subject": "culture",
+      "title": "문화 이해 · 관점 비교",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 s_사회문화 정답,해설.pdf · 4번"
+      ],
+      "linkedVerifiedCardIds": [
+        "S18"
+      ],
+      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
+      "public": true
+    },
+    {
+      "id": "v35-s09-b01",
+      "chapterId": "S09",
+      "subject": "culture",
+      "title": "주류·하위·반문화의 관계",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 86~87쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 86~87쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "86~87쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s09-b02",
+      "chapterId": "S09",
+      "subject": "culture",
+      "title": "지역 문화·세대 문화",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 87쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 87쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "87쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s09-b03",
+      "chapterId": "S09",
+      "subject": "culture",
+      "title": "대중문화와 일방향·쌍방향 매체",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 87~88쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 87~88쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "87~88쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s10-b01",
+      "chapterId": "S10",
+      "subject": "culture",
+      "title": "문화 변동의 발생 원인",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 94쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 94쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "94쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s10-b02",
+      "chapterId": "S10",
+      "subject": "culture",
+      "title": "문화 접변과 세 가지 결과",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 94~95쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 94~95쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "94~95쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s10-b03",
+      "chapterId": "S10",
+      "subject": "culture",
+      "title": "문화 지체·문화 충격과 적응",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 95~96쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 95~96쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "95~96쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "s-culture-diffusion",
+      "chapterId": "S10",
+      "subject": "culture",
+      "title": "문화 변동 · 전파와 접변",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 사회·문화 p.94~95",
+        "2027학년도 6월 모의평가 사문 12번 및 EBS 해설"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "EBS 2027 사문 p.94~95의 문화 변동 요인·문화 접변 결과를 대조함",
+      "public": true
+    },
+    {
+      "id": "v35-s11-b01",
+      "chapterId": "S11",
+      "subject": "culture",
+      "title": "사회적 희소가치와 불평등의 세 차원",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 104~105쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 104~105쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "104~105쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s11-b02",
+      "chapterId": "S11",
+      "subject": "culture",
+      "title": "사회 불평등 · 기능론 vs 갈등론",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 106쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 106쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "106쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "s11-class",
+      "chapterId": "S11",
+      "subject": "culture",
+      "title": "마르크스 계급론 vs 베버 계층론",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 사회·문화 104~106쪽"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "사문 교재 104~106쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
+      "public": true
+    },
+    {
+      "id": "v35-s12-b01",
+      "chapterId": "S12",
+      "subject": "culture",
+      "title": "계층 구조의 형태 · 피라미드·다이아몬드·모래시계",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 113~114쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 113~114쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "113~114쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s12-b02",
+      "chapterId": "S12",
+      "subject": "culture",
+      "title": "세대 간 이동 도표 · 표 읽는 순서",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 112~114쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 112~114쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "112~114쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "s12-mobility",
+      "chapterId": "S12",
+      "subject": "culture",
+      "title": "사회 이동과 계층 구조",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 사회·문화 112~114쪽"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "사문 교재 112~114쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
+      "public": true
+    },
+    {
+      "id": "v35-s13-b01",
+      "chapterId": "S13",
+      "subject": "culture",
+      "title": "사회적 소수자와 차별의 조건",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 122쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 122쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "122쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s13-b02",
+      "chapterId": "S13",
+      "subject": "culture",
+      "title": "성 불평등과 사회적 성",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 123쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 123쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "123쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s13-b03",
+      "chapterId": "S13",
+      "subject": "culture",
+      "title": "절대적 빈곤 vs 상대적 빈곤",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 124쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 124쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "124쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "s-minority",
+      "chapterId": "S13",
+      "subject": "culture",
+      "title": "사회적 소수자와 차별",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 s_사회문화 정답,해설.pdf · 18번"
+      ],
+      "linkedVerifiedCardIds": [
+        "S23"
+      ],
+      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
+      "public": true
+    },
+    {
+      "id": "v35-s14-b01",
+      "chapterId": "S14",
+      "subject": "culture",
+      "title": "복지 제도의 목적·형성·한계",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 130~132쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 130~132쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "130~132쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s14-b02",
+      "chapterId": "S14",
+      "subject": "culture",
+      "title": "복지 수혜자 중복 계산 · 집합 해석",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 130~132쪽·6모 사문 15번·9모 사문 15번의 해설과 연계"
+      ],
+      "sourceComparison": "2027 수특 사문 130~132쪽·6모 사문 15번·9모 사문 15번의 해설과 연계의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "130~132쪽·6모 사문 15번·9모 사문 15번의 해설과 연계"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "s14-welfare",
+      "chapterId": "S14",
+      "subject": "culture",
+      "title": "사회 보장 제도 · 3가지 비교",
+      "status": "verified",
+      "source": [
+        "2027 EBS 수능특강 사회·문화 130~132쪽"
+      ],
+      "linkedVerifiedCardIds": [],
+      "sourceComparison": "사문 교재 130~132쪽의 핵심 개념 설명과 사상가별 입장을 직접 대조·재서술함",
+      "public": true
+    },
+    {
+      "id": "v35-s15-b01",
+      "chapterId": "S15",
+      "subject": "culture",
+      "title": "사회 변동의 다양한 원인",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 141쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 141쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "141쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s15-b02",
+      "chapterId": "S15",
+      "subject": "culture",
+      "title": "진화론·순환론·기능론·갈등론",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 141~142쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 141~142쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "141~142쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s15-b03",
+      "chapterId": "S15",
+      "subject": "culture",
+      "title": "사회 운동의 특징과 유형",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 143쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 143쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "143쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "s-socchange",
+      "chapterId": "S15",
+      "subject": "culture",
+      "title": "사회 변동 이론 · 진화론과 순환론",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 s_사회문화 정답,해설.pdf · 13번",
+        "2027학년도 9월 모의평가_s 사회문화 정답,해설.pdf · 18번"
+      ],
+      "linkedVerifiedCardIds": [
+        "S20"
+      ],
+      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
+      "public": true
+    },
+    {
+      "id": "v35-s16-b01",
+      "chapterId": "S16",
+      "subject": "culture",
+      "title": "세계화와 정보화 · 효과와 문제",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 151~152쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 151~152쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "151~152쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s16-b02",
+      "chapterId": "S16",
+      "subject": "culture",
+      "title": "저출산·고령화·다문화적 변화",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 152쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 152쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "152쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s16-b03",
+      "chapterId": "S16",
+      "subject": "culture",
+      "title": "인구 지표 공식 · 분모를 먼저 확인",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 152쪽·2027학년도 6월·9월 모의평가 사문 인구 도표 해설과 연계"
+      ],
+      "sourceComparison": "2027 수특 사문 152쪽·2027학년도 6월·9월 모의평가 사문 인구 도표 해설과 연계의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "152쪽·2027학년도 6월·9월 모의평가 사문 인구 도표 해설과 연계"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "v35-s16-b04",
+      "chapterId": "S16",
+      "subject": "culture",
+      "title": "환경·자원·전쟁 등 전 지구적 문제",
+      "status": "verified",
+      "source": [
+        "2027학년도 EBS 수능특강 사회·문화 153쪽"
+      ],
+      "sourceComparison": "2027 수특 사문 153쪽의 본문 개념·유형 설명과 대조해 독립 재서술",
+      "sourceBasis": {
+        "file": "2027 수능 특강 사회문화.pdf",
+        "pages": "153쪽"
+      },
+      "provenanceType": "EBS-source-checked",
+      "public": true
+    },
+    {
+      "id": "s16-demography",
+      "chapterId": "S16",
+      "subject": "culture",
+      "title": "인구 구조 · 노령화 지수와 부양비",
+      "status": "verified",
+      "source": [
+        "2027학년도 6월 모의평가 s_사회문화 정답,해설.pdf · 20번",
+        "2027학년도 9월 모의평가_s 사회문화 정답,해설.pdf · 20번"
+      ],
+      "linkedVerifiedCardIds": [
+        "S22"
+      ],
+      "sourceComparison": "V0.3.2 검증 카드의 문장만 재배치",
       "public": true
     }
   ],
