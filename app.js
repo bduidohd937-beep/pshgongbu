@@ -1,4 +1,4 @@
-// PSH 공부 V0.3.3 — 주제별 개념 / 문항별 복습 분리
+// PSH 공부 V0.3.7 — 카드 프레임·제목 고정, 본문 내부 전용 스크롤
 const subjects={
  ethics:{name:'생활과 윤리',symbol:'◒',description:'사상가 · 윤리 이론',concepts:window.v033Topics.ethics,quizzes:window.v03Content.ethics},
  culture:{name:'사회·문화',symbol:'◎',description:'사회 현상 · 자료 분석',concepts:window.v033Topics.culture,quizzes:window.v03Content.culture}
@@ -38,10 +38,10 @@ function closeStudy(){
 }
 function topicHtml(item){
  const sections=item.sections.map(s=>`<section class="topic-section"><h3>${escapeHtml(s.name)}</h3><ul>${s.points.map(p=>`<li>${escapeHtml(p)}</li>`).join('')}</ul></section>`).join('');
- return `<div class="topic-main"><div class="card-kicker">${escapeHtml(item.unit)}</div><h2 class="topic-title">${escapeHtml(item.title)}</h2><p class="topic-summary">${escapeHtml(item.summary)}</p><div class="topic-sections">${sections}</div><div class="topic-trap"><span class="trap-label">수능 함정</span><p>${escapeHtml(item.trap)}</p></div></div><div class="topic-source"><details><summary>출처 보기</summary><p>${item.sources.map(s=>escapeHtml(s)).join(' · ')}</p></details></div>`;
+ return `<div class="topic-fixed"><div class="card-kicker">${escapeHtml(item.unit)}</div><h2 class="topic-title">${escapeHtml(item.title)}</h2></div><div class="topic-scroll" tabindex="0" role="region" aria-label="개념 본문"><p class="topic-summary">${escapeHtml(item.summary)}</p><div class="topic-sections">${sections}</div><div class="topic-trap"><span class="trap-label">수능 함정</span><p>${escapeHtml(item.trap)}</p></div><div class="topic-source"><details><summary>출처 보기</summary><p>${item.sources.map(s=>escapeHtml(s)).join(' · ')}</p></details></div></div>`;
 }
 function examHtml(item){
- return `<div class="topic-main"><div class="card-kicker">기출 문항별 복습 · ${item[3].map(escapeHtml).join(' / ')}</div><h2 class="topic-title">${escapeHtml(item[1])}</h2><p class="topic-summary">${escapeHtml(item[2])}</p><div class="topic-trap"><span class="trap-label">정오 판단 포인트</span><p>${escapeHtml(item[4]||'')}</p></div></div><div class="topic-source">문항 원문이 아닌 개념 해설을 재구성한 복습 카드입니다. <span>${escapeHtml(item[6]||'')}</span></div>`;
+ return `<div class="topic-fixed"><div class="card-kicker">기출 문항별 복습 · ${item[3].map(escapeHtml).join(' / ')}</div><h2 class="topic-title">${escapeHtml(item[1])}</h2></div><div class="topic-scroll" tabindex="0" role="region" aria-label="기출 복습 본문"><p class="topic-summary">${escapeHtml(item[2])}</p><div class="topic-trap"><span class="trap-label">정오 판단 포인트</span><p>${escapeHtml(item[4]||'')}</p></div><div class="topic-source">문항 원문이 아닌 개념 해설을 재구성한 복습 카드입니다. <span>${escapeHtml(item[6]||'')}</span></div></div>`;
 }
 function renderStudy(){
  const items=deck(),s=subjects[subjectKey];
@@ -57,11 +57,14 @@ function renderStudy(){
  index=Math.max(0,Math.min(index,items.length-1));
  const item=items[index];
  $('#cardCounter').textContent=`${index+1} / ${items.length}`;
- $('#progressText').textContent='가로로 넘기기 · 세로로 읽기';
+ $('#progressText').textContent='↔ 카드 이동 · ↕ 본문 읽기';
  const card=$('#studyCard');
  card.className=`study-card ${direction} ${mode==='concept'?'topic-card':'exam-card'}`;
  card.innerHTML=mode==='concept'?topicHtml(item):examHtml(item);
- card.scrollTop=0;persist();
+ card.scrollTop=0;
+ const scrollBody=card.querySelector?.('.topic-scroll');
+ if(scrollBody)scrollBody.scrollTop=0;
+ persist();
 }
 function move(step){
  const items=deck();if(!items.length)return;
