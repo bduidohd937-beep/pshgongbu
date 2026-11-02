@@ -1,0 +1,265 @@
+{
+  "version": "V0.5.0",
+  "auditType": "source-crosscheck-for-newly-authored-practice",
+  "questions": 20,
+  "verifiedChoices": 100,
+  "sourceBasis": [
+    "2027 수능특강 생활과 윤리 1.pdf",
+    "2027 수능 특강 사회문화.pdf"
+  ],
+  "basisScope": "EBS 교재의 개념 설명 페이지를 대조하여 독립적으로 만든 5지선다. EBS나 평가원 원문 문항 및 정답을 복제하거나 공식 시험처럼 표기하지 않는다.",
+  "coverage": {
+    "ethics": 10,
+    "culture": 10,
+    "chaptersCovered": [
+      "E01",
+      "E02",
+      "E04",
+      "E07",
+      "E08",
+      "E15",
+      "S01",
+      "S02",
+      "S03",
+      "S05",
+      "S08",
+      "S09",
+      "S14"
+    ],
+    "fullCurriculumCoverage": false
+  },
+  "gate": {
+    "publicOnlyStatus": "source-checked",
+    "kind": "original-five-choice",
+    "optionCount": 5,
+    "rationaleCount": 5,
+    "answerIndex": "0~4 integer"
+  },
+  "limitations": [
+    "31개 단원 전체를 다루는 것은 아니다.",
+    "오답 선지와 해설은 독립적으로 새로 작성한 학습 콘텐츠이며 평가원 공식 해설이 아니다.",
+    "휴대폰 PWA 실기기에서 실제 입력·점수 저장을 추가 확인해야 한다."
+  ],
+  "items": [
+    {
+      "id": "p50-e01",
+      "subject": "ethics",
+      "chapterId": "E01",
+      "title": "기술 윤리학",
+      "source": "2027학년도 EBS 수능특강 생활과 윤리 · 생활과 윤리 PDF 7쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 0,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-e02a",
+      "subject": "ethics",
+      "chapterId": "E02",
+      "title": "칸트의 의무론",
+      "source": "2027학년도 EBS 수능특강 생활과 윤리 · 생활과 윤리 PDF 20쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 3,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-e02b",
+      "subject": "ethics",
+      "chapterId": "E02",
+      "title": "벤담과 밀",
+      "source": "2027학년도 EBS 수능특강 생활과 윤리 · 생활과 윤리 PDF 21쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 1,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-e02c",
+      "subject": "ethics",
+      "chapterId": "E02",
+      "title": "행위·규칙 공리주의",
+      "source": "2027학년도 EBS 수능특강 생활과 윤리 · 생활과 윤리 PDF 21쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 4,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-e04a",
+      "subject": "ethics",
+      "chapterId": "E04",
+      "title": "싱어의 동물 윤리",
+      "source": "2027학년도 EBS 수능특강 생활과 윤리 · 생활과 윤리 PDF 44쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 1,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-e04b",
+      "subject": "ethics",
+      "chapterId": "E04",
+      "title": "레건의 동물 권리론",
+      "source": "2027학년도 EBS 수능특강 생활과 윤리 · 생활과 윤리 PDF 44쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 2,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-e07",
+      "subject": "ethics",
+      "chapterId": "E07",
+      "title": "롤스와 노직",
+      "source": "2027학년도 EBS 수능특강 생활과 윤리 · 생활과 윤리 PDF 72쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 3,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-e08",
+      "subject": "ethics",
+      "chapterId": "E08",
+      "title": "시민 불복종",
+      "source": "2027학년도 EBS 수능특강 생활과 윤리 · 생활과 윤리 PDF 87쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 4,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-e15a",
+      "subject": "ethics",
+      "chapterId": "E15",
+      "title": "갈퉁의 평화",
+      "source": "2027학년도 EBS 수능특강 생활과 윤리 · 생활과 윤리 PDF 160쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 0,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-e15b",
+      "subject": "ethics",
+      "chapterId": "E15",
+      "title": "롤스의 해외 원조",
+      "source": "2027학년도 EBS 수능특강 생활과 윤리 · 생활과 윤리 PDF 162쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 4,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-s01",
+      "subject": "culture",
+      "chapterId": "S01",
+      "title": "사회학적 관점",
+      "source": "2027학년도 EBS 수능특강 사회·문화 · 사회·문화 PDF 9~10쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 1,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-s02a",
+      "subject": "culture",
+      "chapterId": "S02",
+      "title": "독립·종속 변인",
+      "source": "2027학년도 EBS 수능특강 사회·문화 · 사회·문화 PDF 18쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 3,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-s02b",
+      "subject": "culture",
+      "chapterId": "S02",
+      "title": "질적 연구",
+      "source": "2027학년도 EBS 수능특강 사회·문화 · 사회·문화 PDF 18~19쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 1,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-s03a",
+      "subject": "culture",
+      "chapterId": "S03",
+      "title": "질문지법",
+      "source": "2027학년도 EBS 수능특강 사회·문화 · 사회·문화 PDF 28쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 4,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-s03b",
+      "subject": "culture",
+      "chapterId": "S03",
+      "title": "면접법",
+      "source": "2027학년도 EBS 수능특강 사회·문화 · 사회·문화 PDF 29쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 2,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-s05",
+      "subject": "culture",
+      "chapterId": "S05",
+      "title": "예기 사회화",
+      "source": "2027학년도 EBS 수능특강 사회·문화 · 사회·문화 PDF 47쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 1,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-s08",
+      "subject": "culture",
+      "chapterId": "S08",
+      "title": "문화 상대주의",
+      "source": "2027학년도 EBS 수능특강 사회·문화 · 사회·문화 PDF 78쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 3,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-s09",
+      "subject": "culture",
+      "chapterId": "S09",
+      "title": "문화 접변의 결과",
+      "source": "2027학년도 EBS 수능특강 사회·문화 · 사회·문화 PDF 95쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 3,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-s14a",
+      "subject": "culture",
+      "chapterId": "S14",
+      "title": "사회 보험·공공 부조",
+      "source": "2027학년도 EBS 수능특강 사회·문화 · 사회·문화 PDF 131쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 0,
+      "status": "source-checked"
+    },
+    {
+      "id": "p50-s14b",
+      "subject": "culture",
+      "chapterId": "S14",
+      "title": "사회 서비스",
+      "source": "2027학년도 EBS 수능특강 사회·문화 · 사회·문화 PDF 132쪽 · 핵심 개념에 근거한 독립 창작",
+      "options": 5,
+      "rationales": 5,
+      "answerIndex": 2,
+      "status": "source-checked"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
-// PSH 공부 V0.4.4 — 상세 읽기 오버레이를 본문 전용으로 수정
+// PSH 공부 V0.5.0 — EBS 기반 5지선다 실전 문제·채점·선지별 해설·오답 재풀이
 // 학습 콘텐츠는 기존 검증 데이터만 재사용하며 새 주장이나 카드 원문을 추가하지 않는다.
 const subjects={
- ethics:{name:'생활과 윤리',symbol:'◒',description:'사상가 · 윤리 이론',concepts:window.v033Topics.ethics,quizzes:window.v03Content.ethics},
- culture:{name:'사회·문화',symbol:'◎',description:'사회 현상 · 자료 분석',concepts:window.v033Topics.culture,quizzes:window.v03Content.culture}
+ ethics:{name:'생활과 윤리',symbol:'◒',description:'사상가 · 윤리 이론',concepts:window.v033Topics.ethics,quizzes:window.v03Content.ethics,practice:window.pshPracticeV050.ethics.filter(q=>q.status==='source-checked'&&q.kind==='original-five-choice'&&q.choices?.length===5&&q.rationales?.length===5&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<5)},
+ culture:{name:'사회·문화',symbol:'◎',description:'사회 현상 · 자료 분석',concepts:window.v033Topics.culture,quizzes:window.v03Content.culture,practice:window.pshPracticeV050.culture.filter(q=>q.status==='source-checked'&&q.kind==='original-five-choice'&&q.choices?.length===5&&q.rationales?.length===5&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<5)}
 };
 const $=selector=>document.querySelector(selector);
 const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -12,6 +12,96 @@ let studyView='quick',unknownOnly=false,cardRatings={},reviewFilter='all';
 let personal={likes:{},bookmarks:{},notes:{}};
 let memoKey=null,memoOriginal='',memoFocusReturn=null,memoHistoryActive=false,ignoreNextPop=false;
 let settingsHistoryActive=false,settingsFocusReturn=null;
+let practiceProgress={},practiceWrongOnly=false,practiceReviewHold=null;
+try{
+ const records=JSON.parse(localStorage.getItem('psh-practice-v050')||'{}');
+ if(records&&typeof records==='object'&&!Array.isArray(records))practiceProgress=records;
+}catch(_){}
+try{practiceWrongOnly=localStorage.getItem('psh-practice-wrong-v050')==='true'}catch(_){}
+function practiceKey(question){return subjectKey+':'+question.id}
+function practiceState(question){return practiceProgress[practiceKey(question)]||{selected:null,submitted:false,attempts:0,lastCorrect:null}}
+function savePractice(){
+ try{localStorage.setItem('psh-practice-v050',JSON.stringify(practiceProgress));return true}
+ catch(_){window.alert?.('문제 풀이 기록을 저장하지 못했어요. 저장 공간을 확인해 주세요.');return false}
+}
+function practiceStats(){
+ const all=subjects[subjectKey].practice;
+ const solved=all.filter(x=>practiceState(x).attempts>0);
+ return {total:all.length,solved:solved.length,correct:solved.filter(x=>practiceState(x).lastCorrect===true).length,wrong:solved.filter(x=>practiceState(x).lastCorrect===false).length};
+}
+function updatePracticeToolbar(){
+ const active=mode==='practice',stats=practiceStats();
+ $('#practiceToolbar').hidden=!active;
+ $('#practiceWrongOnly').textContent=(practiceWrongOnly?'오답만 보기 ✓':'오답만 다시 풀기')+' ('+stats.wrong+')';
+ $('#practiceWrongOnly').setAttribute('aria-pressed',String(practiceWrongOnly));
+ $('#practiceStats').textContent='풀이 '+stats.solved+'/'+stats.total+' · 최근 정답 '+stats.correct;
+ $('#cardViewport').classList.toggle('practice-viewport',active);
+}
+function togglePracticeWrong(){
+ if(mode!=='practice')return;
+ practiceWrongOnly=!practiceWrongOnly;practiceReviewHold=null;shuffledIds=null;index=0;
+ localStorage.setItem('psh-practice-wrong-v050',String(practiceWrongOnly));
+ renderStudy();
+}
+const answerLabels=['①','②','③','④','⑤'];
+function practiceCard(question){
+ const state=practiceState(question),submitted=state.submitted===true;
+ const options=question.choices.map((choice,i)=>{
+  let status='';
+  if(submitted){if(i===question.answer)status=' is-correct';else if(i===state.selected)status=' is-wrong'}
+  return `<button type="button" class="practice-choice${status}${state.selected===i?' is-selected':''}" data-choice="${i}" aria-pressed="${state.selected===i}" ${submitted?'disabled':''}><span class="practice-number">${answerLabels[i]}</span><span>${escapeHtml(choice)}</span></button>`;
+ }).join('');
+ const feedback=submitted?`<section class="practice-feedback" aria-live="polite"><h3 class="${state.selected===question.answer?'correct':'wrong'}">${state.selected===question.answer?'정답입니다!':'오답입니다.'} 정답 ${answerLabels[question.answer]}</h3><p class="practice-explain-summary">${escapeHtml(question.summary)}</p><h4>선지별 해설</h4>${question.rationales.map((why,i)=>`<p class="practice-reason"><strong>${answerLabels[i]} ${i===question.answer?'✓ 정답':'✕'}</strong> ${escapeHtml(why)}</p>`).join('')}<p class="practice-source">근거: ${escapeHtml(question.source)}<br>기출 원문이 아닌 자체 제작 학습 문항입니다.</p></section>`:'';
+ return `<div class="practice-scroll" tabindex="0" role="region" aria-label="5지선다 문제 풀이"><div class="practice-kicker">${escapeHtml(question.chapterId)} · 자체 제작 5지선다</div><h2>${escapeHtml(question.title)}</h2><p class="practice-stem">${escapeHtml(question.stem)}</p><div class="practice-choices" role="group" aria-label="답 선택">${options}</div>${feedback}</div><div class="practice-footer">${submitted?'<button type="button" id="practiceRetry">다시 풀기</button><button type="button" id="practiceNext" class="primary">다음 문제 →</button>':`<span class="practice-selection">${state.selected===null?'정답을 하나 고르세요.':'선택 '+answerLabels[state.selected]}</span><button type="button" id="practiceSubmit" class="primary" ${state.selected===null?'disabled':''}>정답 확인</button>`}</div>`;
+}
+function changePracticeChoice(choice){
+ const item=deck()[index];if(mode!=='practice'||!item)return;
+ const previous=practiceState(item);
+ if(previous.submitted)return;
+ const oldScroll=$('#studyCard').querySelector('.practice-scroll')?.scrollTop||0;
+ const key=practiceKey(item);
+ practiceProgress[key]={...previous,selected:choice};
+ if(!savePractice()){practiceProgress[key]=previous;return}
+ renderStudy();
+ const scroller=$('#studyCard').querySelector('.practice-scroll');if(scroller)scroller.scrollTop=oldScroll;
+}
+function submitPractice(){
+ const item=deck()[index];if(mode!=='practice'||!item)return;
+ const prior=practiceState(item);
+ if(prior.submitted||!Number.isInteger(prior.selected)||prior.selected<0||prior.selected>4)return;
+ const oldScroll=$('#studyCard').querySelector('.practice-scroll')?.scrollTop||0;
+ const key=practiceKey(item),correct=prior.selected===item.answer;
+ practiceProgress[key]={...prior,submitted:true,attempts:(prior.attempts||0)+1,lastCorrect:correct};
+ if(!savePractice()){practiceProgress[key]=prior;return}
+ if(practiceWrongOnly&&correct)practiceReviewHold=item.id;
+ renderStudy();
+ const scroller=$('#studyCard').querySelector('.practice-scroll');if(scroller)scroller.scrollTop=oldScroll;
+}
+function retryPractice(){
+ const item=deck()[index];if(mode!=='practice'||!item)return;
+ const old=practiceState(item),key=practiceKey(item);
+ practiceProgress[key]={...old,selected:null,submitted:false};
+ if(!savePractice()){practiceProgress[key]=old;return}
+ renderStudy();
+}
+function nextPractice(){
+ if(practiceReviewHold){
+  const current=practiceReviewHold;practiceReviewHold=null;
+  const items=deck();index=items.length?Math.min(index,items.length-1):0;
+  renderStudy();return;
+ }
+ move(1);
+}
+function bindPractice(card){
+ card.querySelectorAll('.practice-choice').forEach(button=>button.onclick=()=>changePracticeChoice(Number(button.dataset.choice)));
+ const submit=card.querySelector('#practiceSubmit');
+ if(submit)submit.onclick=submitPractice;
+ const retry=card.querySelector('#practiceRetry');
+ if(retry)retry.onclick=retryPractice;
+ const next=card.querySelector('#practiceNext');
+ if(next)next.onclick=nextPractice;
+}
+
 try{
  const viewSettings=JSON.parse(localStorage.getItem('psh-view-v041')||'{}');
  studyView=viewSettings.mode==='reading'?'reading':'quick';
@@ -106,16 +196,17 @@ function markCurrent(status){
 }
 let saved=null;try{saved=JSON.parse(localStorage.getItem('psh-progress')||'null')}catch(_){}
 if(saved&&subjects[saved.subjectKey]){
- subjectKey=saved.subjectKey;mode=saved.mode==='quiz'?'quiz':'concept';
+ subjectKey=saved.subjectKey;mode=['concept','quiz','practice'].includes(saved.mode)?saved.mode:'concept';
  index=Math.max(0,Number(saved.index)||0);
 }
 if(localStorage.getItem('psh-theme')==='dark')document.body.classList.add('dark');
 function persist(){localStorage.setItem('psh-progress',JSON.stringify({subjectKey,mode,index,unit}))}
-function itemId(item){return mode==='concept'?item.id:item[0]}
+function itemId(item){return mode==='concept'||mode==='practice'?item.id:item[0]}
 function deck(){
- const all=mode==='concept'?subjects[subjectKey].concepts:subjects[subjectKey].quizzes;
+ const all=mode==='concept'?subjects[subjectKey].concepts:mode==='practice'?subjects[subjectKey].practice:subjects[subjectKey].quizzes;
  const items=all.filter(item=>{
-  if(!(unit==='all'||(mode==='concept'?item.chapterId===unit:item[3].some(tag=>tag.startsWith(unit)))))return false;
+  if(!(unit==='all'||(mode==='concept'||mode==='practice'?item.chapterId===unit:item[3].some(tag=>tag.startsWith(unit)))))return false;
+  if(mode==='practice')return !practiceWrongOnly||(practiceState(item).attempts>0&&practiceState(item).lastCorrect===false)||practiceReviewHold===item.id;
   if(mode!=='concept'||reviewFilter==='all')return true;
   if(reviewFilter==='unknown')return ratingOf(item)==='unknown';
   if(reviewFilter==='bookmark')return personal.bookmarks[personalKey(item)]===true;
@@ -130,14 +221,14 @@ function renderHome(){
  document.querySelectorAll('[data-subject]').forEach(button=>button.onclick=()=>openStudy(button.dataset.subject));
 }
 function fillUnits(){
- const units=mode==='concept'?window.v034Curriculum.chapters.filter(ch=>ch.subject===subjectKey).map(ch=>({value:ch.id,label:String(ch.number).padStart(2,'0')+'. '+ch.name+' · '+subjects[subjectKey].concepts.filter(t=>t.chapterId===ch.id).length+'장'})):[{value:'6모',label:'6월 모평'},{value:'9모',label:'9월 모평'}];
+ const units=mode==='quiz'?[{value:'6모',label:'6월 모평'},{value:'9모',label:'9월 모평'}]:window.v034Curriculum.chapters.filter(ch=>ch.subject===subjectKey&&(mode==='concept'||subjects[subjectKey].practice.some(q=>q.chapterId===ch.id))).map(ch=>({value:ch.id,label:String(ch.number).padStart(2,'0')+'. '+ch.name+' · '+(mode==='practice'?subjects[subjectKey].practice.filter(q=>q.chapterId===ch.id).length:subjects[subjectKey].concepts.filter(t=>t.chapterId===ch.id).length)+(mode==='practice'?'문항':'장')}));
  $('#unitFilter').innerHTML='<option value="all">전체 카드</option>'+units.map(x=>`<option value="${escapeHtml(x.value)}">${escapeHtml(x.label)}</option>`).join('');
  $('#unitFilter').value=unit;
 }
 function openStudy(key){
  if(!subjects[key])return;
  if(subjectKey!==key&&reviewFilter!=='all'){reviewFilter='all';unknownOnly=false;saveView();}
- subjectKey=key;index=0;unit='all';shuffledIds=null;direction='next';gesture=null;
+ subjectKey=key;index=0;unit='all';shuffledIds=null;direction='next';gesture=null;practiceReviewHold=null;
  $('#studyDetail').hidden=true;detailHistoryActive=false;
  $('#home').hidden=true;$('#study').hidden=false;
  if(location.hash!==`#${key}`)history.pushState({study:true},'',`#${key}`);
@@ -178,29 +269,36 @@ function renderStudy(){
  $('#subjectTitle').textContent=shorts?'PSH 공부':s.name;
  document.querySelectorAll('.tab').forEach(tab=>tab.classList.toggle('active',tab.dataset.mode===mode));
  const card=$('#studyCard');
- card.className=mode==='concept'&&studyView==='reading'?'study-card reading-card':'study-card feed-card';
- updateToolbar();
+ card.className=mode==='practice'?'study-card practice-card':mode==='concept'&&studyView==='reading'?'study-card reading-card':'study-card feed-card';
+ updateToolbar();updatePracticeToolbar();
  gesture=null;
  if(!items.length){
-  const filtering=mode==='concept'&&reviewFilter!=='all';
+  const filtering=(mode==='concept'&&reviewFilter!=='all')||(mode==='practice'&&practiceWrongOnly);
   $('#cardCounter').textContent=filtering?'0 / 0':'검증 대기';
   $('#progressText').textContent=filtering?'선택 목록에 카드 없음':'공개 콘텐츠 0장';
-  const name={unknown:'모르는 카드',bookmark:'즐겨찾기',liked:'좋아요'}[reviewFilter]||'선택 목록';
+  const name=mode==='practice'?'다시 풀 오답 문제':({unknown:'모르는 카드',bookmark:'즐겨찾기',liked:'좋아요'}[reviewFilter]||'선택 목록');
   card.innerHTML=filtering?'<div class="feed-main empty-state"><h2>'+name+'가 없어요.</h2><p>다른 카드에서 표시하거나 위의 복습 목록을 전체 카드로 변경해 주세요.</p></div>':'<div class="feed-main"><h2>검증 중인 콘텐츠입니다</h2><p>원본과 대조한 내용만 공개해요.</p></div>';
   return;
  }
  index=Math.max(0,Math.min(index,items.length-1));
  const item=items[index];
  $('#cardCounter').textContent=`${index+1} / ${items.length}`;
- $('#progressText').textContent=mode==='concept'&&studyView==='reading'?'↕ 본문 · ↔ 카드':'↑ 다음 · ↓ 이전';
- card.innerHTML=mode==='concept'?(studyView==='reading'?readingTopic(item):topicPreview(item)+personalActions(item)+ratingActions(item)):examPreview(item);
+ $('#progressText').textContent=mode==='practice'?'5지선다 · 채점 후 해설':mode==='concept'&&studyView==='reading'?'↕ 본문 · ↔ 카드':'↑ 다음 · ↓ 이전';
+ card.innerHTML=mode==='practice'?practiceCard(item):mode==='concept'?(studyView==='reading'?readingTopic(item):topicPreview(item)+personalActions(item)+ratingActions(item)):examPreview(item);
  card.querySelector('.read-more')?.addEventListener('click',openDetail);
  card.querySelectorAll('.rating-control').forEach(button=>button.onclick=()=>markCurrent(button.dataset.rating));
  if(mode==='concept')bindPersonal(card);
+ if(mode==='practice')bindPractice(card);
  persist();
 }
 function move(step){
  if(!$('#studyDetail').hidden)return false;
+ if(mode==='practice'&&practiceReviewHold){
+  practiceReviewHold=null;
+  const current=deck();
+  index=current.length?Math.min(Math.max(index+(step<0?-1:0),0),current.length-1):0;
+  renderStudy();return true;
+ }
  const items=deck();if(!items.length)return false;
  direction=step>0?'next':'previous';index=(index+step+items.length)%items.length;
  renderStudy();return true;
@@ -239,6 +337,7 @@ function openShortsSettings(){
  unitSelect.innerHTML=$('#unitFilter').innerHTML;unitSelect.value=unit;
  $('#shortsTabConcept').setAttribute('aria-pressed','true');
  $('#shortsTabQuiz').setAttribute('aria-pressed','false');
+ $('#shortsTabPractice').setAttribute('aria-pressed','false');
  $('#shortsSettings').hidden=false;gesture=null;
  $('#shortsSettingsClose').focus();
  history.pushState({shortsSettings:true},'',location.href);
@@ -267,6 +366,11 @@ $('#shortsUnitFilter').onchange=e=>{
 $('#shortsRandom').onclick=()=>{closeShortsSettings(true);shuffle()};
 $('#shortsTheme').onclick=()=>{$('#themeButton').onclick();closeShortsSettings(true)};
 $('#shortsTabConcept').onclick=()=>closeShortsSettings(true);
+$('#shortsTabPractice').onclick=()=>{
+ closeShortsSettings(true);
+ const button=document.querySelector('.tab[data-mode="practice"]');
+ if(button)button.onclick?.();
+};
 $('#shortsTabQuiz').onclick=()=>{
  closeShortsSettings(true);
  const button=document.querySelector('.tab[data-mode="quiz"]');
@@ -361,9 +465,10 @@ function deleteMemo(){
 $('#memoCancel').onclick=()=>closeMemo(true);
 $('#memoSave').onclick=saveMemo;
 $('#memoDelete').onclick=deleteMemo;
-document.querySelectorAll('.tab').forEach(button=>button.onclick=()=>{if(!$('#studyDetail').hidden)return;mode=button.dataset.mode;index=0;unit='all';shuffledIds=null;fillUnits();renderStudy()});
+document.querySelectorAll('.tab').forEach(button=>button.onclick=()=>{if(!$('#studyDetail').hidden)return;mode=button.dataset.mode;index=0;unit='all';shuffledIds=null;practiceReviewHold=null;fillUnits();renderStudy()});
 $('#unitFilter').onchange=e=>{unit=e.target.value;index=0;shuffledIds=null;renderStudy()};
 $('#randomButton').onclick=shuffle;$('#backButton').onclick=closeStudy;
+$('#practiceWrongOnly').onclick=togglePracticeWrong;
 $('#quickMode').onclick=()=>changeStudyView('quick');
 $('#readingMode').onclick=()=>changeStudyView('reading');
 $('#reviewFilter').onchange=e=>changeReviewFilter(e.target.value);
@@ -378,7 +483,7 @@ $('#themeButton').onclick=()=>{
 const viewport=$('#cardViewport');
 viewport.addEventListener('touchstart',e=>{
  gesture=null;
- if(!$('#shortsSettings').hidden||!$('#studyDetail').hidden||e.touches.length!==1||e.target?.closest?.('button,a,input,select,textarea,summary,details'))return;
+ if(mode==='practice'||!$('#shortsSettings').hidden||!$('#studyDetail').hidden||e.touches.length!==1||e.target?.closest?.('button,a,input,select,textarea,summary,details'))return;
  const t=e.touches[0];
  gesture={x:t.clientX,y:t.clientY,started:Date.now(),identifier:t.identifier};
 },{passive:true});
@@ -421,6 +526,11 @@ document.addEventListener('keydown',e=>{
  if(!$('#memoOverlay').hidden){if(e.key==='Escape'){e.preventDefault();closeMemo(true)}return}
  if(!$('#studyDetail').hidden){if(e.key==='Escape'){e.preventDefault();closeDetail(true)}return}
  if($('#study').hidden)return;
+ if(mode==='practice'){
+  if(e.key==='ArrowLeft'){e.preventDefault();move(-1)}
+  if(e.key==='ArrowRight'){e.preventDefault();move(1)}
+  return;
+ }
  if(mode==='concept'&&studyView==='reading'){
   if(e.key==='ArrowLeft'){e.preventDefault();move(-1)}
   if(e.key==='ArrowRight'){e.preventDefault();move(1)}
