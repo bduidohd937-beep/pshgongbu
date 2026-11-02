@@ -58,3 +58,50 @@
 .install-help{color:var(--muted);font-size:12px;line-height:1.65;margin:9px 2px 0;}
 @media (display-mode:standalone){.install-panel{display:none;}}
 @media(max-width:365px){#progressText{font-size:10px}.study-navigation{gap:6px}.study-navigation button{width:29px;height:29px;}}
+
+/* V0.3.7 — 카드 틀·제목 완전 고정, 본문만 독립 스크롤 */
+.study-screen,.card-viewport{min-height:0;overflow:hidden;}
+.card-viewport{flex:1 1 auto;position:relative;overscroll-behavior:contain;}
+.study-card,
+.study-card.next,
+.study-card.previous{
+ height:100%;min-height:0;max-height:100%;width:100%;
+ display:flex;flex-direction:column;justify-content:flex-start;
+ overflow:hidden;padding:0;gap:0;
+ position:relative;overscroll-behavior:contain;
+ animation:none!important;transform:none!important;
+}
+.topic-fixed{
+ flex:0 0 auto;
+ padding:21px 22px 16px;
+ border-bottom:1px solid var(--border);
+ background:var(--card);
+}
+.topic-fixed .card-kicker{font-size:11px;}
+.study-card .topic-fixed .topic-title{
+ margin:9px 0 0;
+ font-size:clamp(24px,6.3vw,32px);
+ line-height:1.3;
+}
+.topic-scroll{
+ flex:1 1 auto;
+ min-height:0;
+ overflow-y:auto;
+ overflow-x:hidden;
+ padding:18px 22px 24px;
+ overscroll-behavior-y:contain;
+ -webkit-overflow-scrolling:touch;
+ touch-action:pan-y;
+ scrollbar-width:thin;
+}
+.topic-scroll .topic-summary{
+ margin:0 0 19px;
+}
+.topic-scroll .topic-source{
+ margin-top:16px;
+}
+@media(max-height:690px){
+ .topic-fixed{padding:15px 19px 12px;}
+ .topic-scroll{padding:13px 19px 20px;}
+ .study-card .topic-fixed .topic-title{font-size:25px;}
+}
