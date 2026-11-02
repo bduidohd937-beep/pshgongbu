@@ -1,6 +1,6 @@
 // V0.3.5: 새롭게 검증한 카드만 공개하고 31강 순으로 학습한다.
 (()=>{
- const bookOrder=Object.fromEntries(["ethics","culture"].flatMap(subject=>Array.from({length:subject==="ethics"?15:16},(_,i)=>[subject[0].toUpperCase()+String(i+1).padStart(2,"0"),i])));
+ const bookOrder=Object.fromEntries(["ethics","culture"].flatMap(subject=>Array.from({length:subject==="ethics"?15:16},(_,i)=>[(subject==="ethics"?"E":"S")+String(i+1).padStart(2,"0"),i])));
  const oldCount={ethics:28,culture:28};
  const valid=card=>Boolean(card&&card.status==="verified"&&card.id&&card.chapterId&&card.title&&card.summary&&Array.isArray(card.sections)&&card.sections.length&&card.sections.every(s=>s.name&&Array.isArray(s.points)&&s.points.length&&s.points.every(p=>typeof p==="string"&&p.trim().length>=10))&&Array.isArray(card.sources)&&card.sources.length&&card.sources.every(s=>s.includes("2027학년도 EBS 수능특강")&&/\d+/.test(s))&&card.sourceComparison&&card.provenanceType==="EBS-source-checked");
  for(const subject of ["ethics","culture"]){
