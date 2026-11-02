@@ -34,7 +34,6 @@ function updateToolbar(){
  $('#readingMode').classList.toggle('active',studyView==='reading');
  const candidates=subjects[subjectKey].concepts.filter(item=>unit==='all'||item.chapterId===unit);
  const unknownCount=candidates.filter(item=>ratingOf(item)==='unknown').length;
- $('#unknownCount').textContent=String(unknownCount);
  $('#unknownOnlyButton').setAttribute('aria-pressed',String(unknownOnly));
  $('#unknownOnlyButton').classList.toggle('active',unknownOnly);
  $('#unknownOnlyButton').textContent=unknownOnly?`모르는 카드만 (${unknownCount}) ✓`:`모르는 카드만 (${unknownCount})`;
