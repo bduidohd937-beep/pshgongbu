@@ -1,0 +1,31 @@
+{
+  "policyVersion": "V0.3.1",
+  "status": "audit-in-progress",
+  "allowedSources": ["2027 EBS 수능특강 생활과 윤리", "2027 EBS 수능특강 사회문화", "2027학년도 평가원 6월·9월 모의평가 문제지 및 정답·해설"],
+  "cards": [
+    {"id":"ethics-01","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"ethics-02","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"ethics-03","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"ethics-04","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"ethics-05","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"ethics-06","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"ethics-07","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"ethics-08","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"ethics-09","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"ethics-10","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"ethics-11","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"ethics-12","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"culture-01","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"culture-02","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"culture-03","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"culture-04","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"culture-05","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"culture-06","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"culture-07","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"culture-08","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"culture-09","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"culture-10","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"culture-11","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"},
+    {"id":"culture-12","status":"blocked","source":null,"locator":null,"error":"원본 출처·페이지 및 대조 기록 없음"}
+  ]
+}
