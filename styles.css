@@ -42,3 +42,19 @@
 .aux-actions{display:none!important;}
 .study-card .topic-title{overflow-wrap:break-word;}
 @media(max-height:690px){.study-screen{padding-bottom:max(5px,env(safe-area-inset-bottom))}.study-meta{padding:7px 2px}.study-card{padding-bottom:16px}}
+
+/* V0.3.6 — 세로=본문 읽기, 좌우=카드 전환 */
+.card-viewport{touch-action:pan-y;overscroll-behavior:contain;}
+.study-card{touch-action:pan-y;overscroll-behavior-y:contain;overflow-x:hidden;-webkit-overflow-scrolling:touch;}
+.study-meta{align-items:center;gap:8px;}
+.study-navigation{display:flex;align-items:center;gap:13px;white-space:nowrap;}
+.study-navigation button{width:32px;height:32px;border:1px solid var(--border);border-radius:10px;background:var(--card);color:var(--text);font-size:23px;line-height:1;display:grid;place-items:center;cursor:pointer;}
+.study-navigation button:active{background:var(--soft);transform:scale(.96);}
+#cardCounter{font-variant-numeric:tabular-nums;min-width:32px;text-align:center;}
+#progressText{font-size:11px;text-align:right;}
+.install-panel{margin-top:20px;}
+.install-button{appearance:none;width:100%;border:1px solid var(--border);border-radius:14px;padding:14px 18px;background:var(--soft);color:var(--text);font:inherit;font-size:14px;font-weight:700;cursor:pointer;}
+.install-button:hover,.install-button:focus-visible{border-color:var(--accent);}
+.install-help{color:var(--muted);font-size:12px;line-height:1.65;margin:9px 2px 0;}
+@media (display-mode:standalone){.install-panel{display:none;}}
+@media(max-width:365px){#progressText{font-size:10px}.study-navigation{gap:6px}.study-navigation button{width:29px;height:29px;}}

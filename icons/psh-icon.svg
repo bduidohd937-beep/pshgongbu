@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="PSH 공부 아이콘">
+<rect width="512" height="512" rx="112" fill="#241e1a"/>
+<rect x="48" y="48" width="416" height="416" rx="92" fill="#352a23" stroke="#cba98b" stroke-width="8"/>
+<path d="M132 151 Q183 129 248 164 V369 Q188 337 132 355 Z" fill="#f5eee7" stroke="#cba98b" stroke-width="9" stroke-linejoin="round"/>
+<path d="M380 151 Q329 129 264 164 V369 Q324 337 380 355 Z" fill="#f5eee7" stroke="#cba98b" stroke-width="9" stroke-linejoin="round"/>
+<path d="M256 167V379" stroke="#cba98b" stroke-width="10" stroke-linecap="round"/>
+<path d="M154 210h66M154 242h66M294 210h65M294 242h65" stroke="#cba98b" stroke-width="9" stroke-linecap="round"/>
+<circle cx="256" cy="113" r="19" fill="#cba98b"/>
+</svg>

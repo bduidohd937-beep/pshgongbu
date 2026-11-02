@@ -5,7 +5,7 @@ const subjects={
 };
 const $=sel=>document.querySelector(sel);
 const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-let subjectKey='ethics',mode='concept',index=0,direction='next',unit='all',touchStart=0,touchStartX=0,touchStartAtTop=false,touchStartAtBottom=false,shuffledIds=null;
+let subjectKey='ethics',mode='concept',index=0,direction='next',unit='all',touchStart=0,touchStartX=0,shuffledIds=null;
 let saved=null;try{saved=JSON.parse(localStorage.getItem('psh-progress')||'null')}catch(e){}
 if(saved&&subjects[saved.subjectKey]){subjectKey=saved.subjectKey;mode=saved.mode==='quiz'?'quiz':'concept';index=Math.max(0,Number(saved.index)||0);unit='all'}
 if(localStorage.getItem('psh-theme')==='dark')document.body.classList.add('dark');
@@ -57,7 +57,7 @@ function renderStudy(){
  index=Math.max(0,Math.min(index,items.length-1));
  const item=items[index];
  $('#cardCounter').textContent=`${index+1} / ${items.length}`;
- $('#progressText').textContent=mode==='concept'?'위로 스와이프 · 다음 카드':'기출 문항별 복습';
+ $('#progressText').textContent='가로로 넘기기 · 세로로 읽기';
  const card=$('#studyCard');
  card.className=`study-card ${direction} ${mode==='concept'?'topic-card':'exam-card'}`;
  card.innerHTML=mode==='concept'?topicHtml(item):examHtml(item);
@@ -77,22 +77,21 @@ function shuffle(){
 document.querySelectorAll('.tab').forEach(button=>button.onclick=()=>{mode=button.dataset.mode;index=0;unit='all';shuffledIds=null;fillUnits();renderStudy()});
 $('#unitFilter').onchange=event=>{unit=event.target.value;index=0;shuffledIds=null;renderStudy()};
 $('#randomButton').onclick=shuffle;$('#backButton').onclick=closeStudy;
+$('#previousTopic').onclick=()=>move(-1);
+$('#nextTopic').onclick=()=>move(1);
 $('#themeButton').onclick=()=>{
  document.body.classList.toggle('dark');
  const dark=document.body.classList.contains('dark');
  localStorage.setItem('psh-theme',dark?'dark':'light');
  document.querySelector('meta[name="theme-color"]').content=dark?'#171513':'#f8f6f2';
 };
-$('#cardViewport').addEventListener('touchstart',e=>{touchStart=e.changedTouches[0].clientY;touchStartX=e.changedTouches[0].clientX;const card=$('#studyCard');touchStartAtTop=card.scrollTop<=3;touchStartAtBottom=card.scrollTop+card.clientHeight>=card.scrollHeight-3},{passive:true});
+// 세로 움직임은 카드 내부 독서에만 사용한다. 가로 스와이프만 다음/이전 카드 이동.
+$('#cardViewport').addEventListener('touchstart',e=>{if(e.touches.length!==1)return;touchStart=e.touches[0].clientY;touchStartX=e.touches[0].clientX},{passive:true});
 $('#cardViewport').addEventListener('touchend',e=>{
- const dy=touchStart-e.changedTouches[0].clientY,dx=Math.abs(touchStartX-e.changedTouches[0].clientX);
- if(Math.abs(dy)<=55||Math.abs(dy)<=dx)return;
- const card=$('#studyCard');
- if(card.scrollHeight>card.clientHeight+5){
-  if(dy>0&&!touchStartAtBottom)return;
-  if(dy<0&&!touchStartAtTop)return;
- }
- move(dy>0?1:-1);
+ if(e.changedTouches.length!==1)return;
+ const dy=e.changedTouches[0].clientY-touchStart,dx=e.changedTouches[0].clientX-touchStart;
+ if(Math.abs(dx)<65||Math.abs(dx)<Math.abs(dy)*1.25)return;
+ move(dx<0?1:-1);
 },{passive:true});
 const syncRoute=()=>{if(!location.hash&&!$('#study').hidden){$('#study').hidden=true;$('#home').hidden=false;renderHome()}};
 window.onpopstate=syncRoute;window.onhashchange=syncRoute;
