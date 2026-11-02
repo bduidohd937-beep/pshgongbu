@@ -1,8 +1,8 @@
 // PSH 공부 V0.5.0 — EBS 기반 5지선다 실전 문제·채점·선지별 해설·오답 재풀이
 // 학습 콘텐츠는 기존 검증 데이터만 재사용하며 새 주장이나 카드 원문을 추가하지 않는다.
 const subjects={
- ethics:{name:'생활과 윤리',symbol:'◒',description:'사상가 · 윤리 이론',concepts:window.v033Topics.ethics,quizzes:window.v03Content.ethics,practice:window.pshPracticeV050.ethics},
- culture:{name:'사회·문화',symbol:'◎',description:'사회 현상 · 자료 분석',concepts:window.v033Topics.culture,quizzes:window.v03Content.culture,practice:window.pshPracticeV050.culture}
+ ethics:{name:'생활과 윤리',symbol:'◒',description:'사상가 · 윤리 이론',concepts:window.v033Topics.ethics,quizzes:window.v03Content.ethics,practice:window.pshPracticeV050.ethics.filter(q=>q.status==='source-checked'&&q.kind==='original-five-choice'&&q.choices?.length===5&&q.rationales?.length===5&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<5)},
+ culture:{name:'사회·문화',symbol:'◎',description:'사회 현상 · 자료 분석',concepts:window.v033Topics.culture,quizzes:window.v03Content.culture,practice:window.pshPracticeV050.culture.filter(q=>q.status==='source-checked'&&q.kind==='original-five-choice'&&q.choices?.length===5&&q.rationales?.length===5&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<5)}
 };
 const $=selector=>document.querySelector(selector);
 const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -293,7 +293,12 @@ function renderStudy(){
 }
 function move(step){
  if(!$('#studyDetail').hidden)return false;
- if(mode==='practice'&&practiceReviewHold){nextPractice();return true;}
+ if(mode==='practice'&&practiceReviewHold){
+  practiceReviewHold=null;
+  const current=deck();
+  index=current.length?Math.min(Math.max(index+(step<0?-1:0),0),current.length-1):0;
+  renderStudy();return true;
+ }
  const items=deck();if(!items.length)return false;
  direction=step>0?'next':'previous';index=(index+step+items.length)%items.length;
  renderStudy();return true;
