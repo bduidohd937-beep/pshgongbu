@@ -33,7 +33,8 @@ const _topicSpecs=[
     "source": [
       "2027 EBS 수능특강 생활과 윤리 p.30"
     ],
-    "verified": true
+    "verified": true,
+    "sourceComparison": "EBS 2027 생윤 p.30의 죽음에 대한 동양 사상 비교 표와 해당 설명을 대조함"
   },
   {
     "id": "e-civil",
@@ -83,7 +84,8 @@ const _topicSpecs=[
       "2027 EBS 수능특강 생활과 윤리 p.86~87",
       "2027학년도 6월 모의평가 생윤 11번 및 EBS 해설"
     ],
-    "verified": true
+    "verified": true,
+    "sourceComparison": "EBS 2027 생윤 p.87 시민 불복종 사상가별 입장 표 및 설명을 대조함"
   },
   {
     "id": "e-nature",
@@ -147,7 +149,8 @@ const _topicSpecs=[
       "2027 EBS 수능특강 생활과 윤리 p.114~117",
       "2027학년도 6월 모의평가 생윤 14번 및 EBS 해설"
     ],
-    "verified": true
+    "verified": true,
+    "sourceComparison": "EBS 2027 생윤 p.114~117 자연과 윤리의 사상가별 설명을 대조함"
   },
   {
     "id": "e-technology",
@@ -322,7 +325,8 @@ const _topicSpecs=[
       "2027 EBS 수능특강 사회·문화 p.9~12",
       "2027학년도 6월 모의평가 사문 2번 및 EBS 해설"
     ],
-    "verified": true
+    "verified": true,
+    "sourceComparison": "EBS 2027 사문 p.9~12의 사회·문화 현상 관점 설명과 6모 2번 해설 대조함"
   },
   {
     "id": "s-deviance",
@@ -365,7 +369,8 @@ const _topicSpecs=[
       "2027 EBS 수능특강 사회·문화 p.68",
       "2027학년도 6월 모의평가 사문 5번 및 EBS 해설"
     ],
-    "verified": true
+    "verified": true,
+    "sourceComparison": "EBS 2027 사문 p.68의 일탈 이론 원인·대응 표 및 6모 5번 해설 대조함"
   },
   {
     "id": "s-bureaucracy",
@@ -394,7 +399,8 @@ const _topicSpecs=[
     "source": [
       "2027학년도 6월 모의평가 사문 3번 및 EBS 해설",
       "2027학년도 9월 모의평가 사문 7번 및 EBS 해설"
-    ]
+    ],
+    "sourceComparison": "2027학년도 6모 사문 3번의 공식 문항과 EBS 해설의 관료제·탈관료제 설명을 대조함"
   },
   {
     "id": "s-research",
@@ -429,7 +435,8 @@ const _topicSpecs=[
     "source": [
       "2027 EBS 수능특강 사회·문화 p.18~20",
       "2027학년도 6월 모의평가 사문 7~8번 및 EBS 해설"
-    ]
+    ],
+    "sourceComparison": "EBS 2027 사문 p.18~20의 양적·질적 연구, 조작적 정의 설명과 6모 7~8번 해설 대조함"
   },
   {
     "id": "s-culture-diffusion",
@@ -470,7 +477,8 @@ const _topicSpecs=[
       "2027 EBS 수능특강 사회·문화 p.94~95",
       "2027학년도 6월 모의평가 사문 12번 및 EBS 해설"
     ],
-    "verified": true
+    "verified": true,
+    "sourceComparison": "EBS 2027 사문 p.94~95의 문화 변동 요인·문화 접변 결과를 대조함"
   },
   {
     "id": "s-culture-view",
@@ -607,6 +615,7 @@ for(const spec of _topicSpecs){
   sections.push({name:part.name,points:unique});
   for(const card of cards){for(const ref of _topicSources(card)){sources.push(ref.document+' · '+ref.question+'번');}}
  }
+ if(spec.sections?.length&&!spec.sourceComparison)valid=false;
  if(sections.length===0||sections.some(s=>!s.name||!s.points?.length||s.points.some(p=>!p)))valid=false;
  if(!sources.length||!spec.title||!spec.summary||!spec.unit||!spec.trap)valid=false;
  if(valid)_topicDeck[spec.subject].push({id:spec.id,unit:spec.unit,title:spec.title,summary:spec.summary,sections,trap:spec.trap,sources:[...new Set(sources)],status:'verified'});
