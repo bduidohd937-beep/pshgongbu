@@ -519,3 +519,7 @@ function _canPublish(c){return c.verificationStatus==='verified'&&!!c.sourceComp
 function _appCard(c){const tags=c.sourceRefs.map(s=>(s.exam.endsWith('6')?'6모 ':'9모 ')+s.question+'번');return [c.id,c.title,c.description,tags,c.trap,'기출',tags.join(' · ')]}
 window.v03Content={ethics:_verifiedMockCards.filter(c=>_canPublish(c)&&c.subject==='생활과 윤리').map(_appCard),culture:_verifiedMockCards.filter(c=>_canPublish(c)&&c.subject==='사회·문화').map(_appCard)};
 window.contentPolicy={version:'V0.3.2',status:'verified-partial',allowedSources:['2027학년도 EBS 수능특강 생활과 윤리','2027학년도 EBS 수능특강 사회문화','2027학년도 평가원 6월·9월 모의평가 문제지 및 EBS 정답·해설'],publishRequirement:['source','locator','independentRewrite','sourceComparison','verified'],publishedCount:_verifiedMockCards.filter(_canPublish).length,gate:'_canPublish'};
+
+// V0.3.3 separates verified source-checked group notes from individually verified exam reviews.
+window.contentPolicy.version='V0.3.3';
+window.contentPolicy.topicPublishRequirement=['source','sourceComparison','verified','reviewedSections'];
