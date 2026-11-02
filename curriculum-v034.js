@@ -745,3 +745,5 @@ window.v034Curriculum={version:'V0.3.4',status:'scope-indexed',topicCandidateCou
     "publishedCount": 0
   }
 ]};
+
+for(const ch of window.v034Curriculum.chapters){ch.publishedCount=(window.v033Topics[ch.subject]||[]).filter(t=>t.chapterId===ch.id).length;ch.complete=false}
