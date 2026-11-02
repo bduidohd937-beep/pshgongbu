@@ -521,5 +521,5 @@ window.v03Content={ethics:_verifiedMockCards.filter(c=>_canPublish(c)&&c.subject
 window.contentPolicy={version:'V0.3.2',status:'verified-partial',allowedSources:['2027학년도 EBS 수능특강 생활과 윤리','2027학년도 EBS 수능특강 사회문화','2027학년도 평가원 6월·9월 모의평가 문제지 및 EBS 정답·해설'],publishRequirement:['source','locator','independentRewrite','sourceComparison','verified'],publishedCount:_verifiedMockCards.filter(_canPublish).length,gate:'_canPublish'};
 
 // V0.3.3 separates verified source-checked group notes from individually verified exam reviews.
-window.contentPolicy.version='V0.3.4';
+window.contentPolicy.version='V0.3.5';
 window.contentPolicy.topicPublishRequirement=['source','sourceComparison','verified','reviewedSections'];

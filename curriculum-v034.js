@@ -747,3 +747,7 @@ window.v034Curriculum={version:'V0.3.4',status:'scope-indexed',topicCandidateCou
 ]};
 
 for(const ch of window.v034Curriculum.chapters){ch.publishedCount=(window.v033Topics[ch.subject]||[]).filter(t=>t.chapterId===ch.id).length;ch.complete=false}
+
+window.v034Curriculum.version='V0.3.5';
+window.v034Curriculum.status='31-chapter-notes-available; details-pending';
+window.v034Curriculum.chapters.forEach(c=>{c.publishedCount=(window.v033Topics[c.subject]||[]).filter(t=>t.chapterId===c.id).length;c.hasLearningNotes=c.publishedCount>0;c.complete=false});

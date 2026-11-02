@@ -1,5 +1,5 @@
 {
-  "policyVersion": "V0.3.4",
+  "policyVersion": "V0.3.5",
   "status": "verified-topic-expansion-in-progress",
   "allowedSources": [
     "2027 EBS 수능특강 생활과 윤리",
@@ -798,5 +798,5 @@
       "public": false
     }
   ],
-  "releaseNote": "기출 문항별 28장 유지. 개념 탭은 별도 topic-audit.json의 검증 카드 28장과 31강 범위 색인으로 운영. 기존 차단 24장·보류 16장 유지."
+  "releaseNote": "개념 탭 교재 비교 노트 120장. 문항별 복습 28장 유지. 기존 24장 blocked, 16장 pending 유지."
 }
