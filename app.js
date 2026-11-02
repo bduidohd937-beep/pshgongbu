@@ -55,13 +55,14 @@ function toggleUnknownOnly(){
 function markCurrent(status){
  if(mode!=='concept'||!['known','unknown'].includes(status))return;
  const item=deck()[index];if(!item)return;
+ const previousScroll=$('#studyCard').querySelector('.reading-scroll')?.scrollTop||0;
  const key=ratingKey(item);
  if(cardRatings[key]===status)delete cardRatings[key];else cardRatings[key]=status;
  localStorage.setItem('psh-ratings-v041',JSON.stringify(cardRatings));
- if(unknownOnly&&ratingOf(item)!=='unknown'){
-  const available=deck();index=Math.min(index,Math.max(0,available.length-1));
- }
+ const remains=(!unknownOnly||ratingOf(item)==='unknown');
+ if(!remains){const available=deck();index=Math.min(index,Math.max(0,available.length-1));}
  renderStudy();
+ if(remains){const scroller=$('#studyCard').querySelector('.reading-scroll');if(scroller)scroller.scrollTop=previousScroll;}
 }
 let saved=null;try{saved=JSON.parse(localStorage.getItem('psh-progress')||'null')}catch(_){}
 if(saved&&subjects[saved.subjectKey]){
@@ -88,6 +89,7 @@ function fillUnits(){
 }
 function openStudy(key){
  if(!subjects[key])return;
+ if(subjectKey!==key&&unknownOnly){unknownOnly=false;saveView();}
  subjectKey=key;index=0;unit='all';shuffledIds=null;direction='next';gesture=null;
  $('#studyDetail').hidden=true;detailHistoryActive=false;
  $('#home').hidden=true;$('#study').hidden=false;
