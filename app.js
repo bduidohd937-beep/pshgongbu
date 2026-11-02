@@ -1,4 +1,4 @@
-// PSH 공부 V0.4.2 — 개인 학습 기록·메모·목록 필터 + 기존 이중 모드 보존
+// PSH 공부 V0.4.3 — Shorts 전체 화면 빠른 복습 + 정독·개인 기록 보존
 // 학습 콘텐츠는 기존 검증 데이터만 재사용하며 새 주장이나 카드 원문을 추가하지 않는다.
 const subjects={
  ethics:{name:'생활과 윤리',symbol:'◒',description:'사상가 · 윤리 이론',concepts:window.v033Topics.ethics,quizzes:window.v03Content.ethics},
@@ -11,6 +11,7 @@ let gesture=null,lastSwipeAt=0,detailHistoryActive=false,detailFocusReturn=null;
 let studyView='quick',unknownOnly=false,cardRatings={},reviewFilter='all';
 let personal={likes:{},bookmarks:{},notes:{}};
 let memoKey=null,memoOriginal='',memoFocusReturn=null,memoHistoryActive=false,ignoreNextPop=false;
+let settingsHistoryActive=false,settingsFocusReturn=null;
 try{
  const viewSettings=JSON.parse(localStorage.getItem('psh-view-v041')||'{}');
  studyView=viewSettings.mode==='reading'?'reading':'quick';
@@ -143,6 +144,7 @@ function openStudy(key){
  fillUnits();renderStudy();
 }
 function closeStudy(){
+ if(!$('#shortsSettings').hidden){closeShortsSettings(true);return;}
  if(!$('#memoOverlay').hidden){closeMemo(true);return;}
  if(!$('#studyDetail').hidden){closeDetail(true);return;}
  history.replaceState({},'',location.pathname+location.search);
@@ -169,7 +171,11 @@ function examDetail(item){
 }
 function renderStudy(){
  const items=deck(),s=subjects[subjectKey];
- $('#subjectTitle').textContent=s.name;
+ const shorts=mode==='concept'&&studyView==='quick';
+ $('#study').classList.toggle('shorts-layout',shorts);
+ $('#shortsSettingsButton').hidden=!shorts;
+ if(!shorts)closeShortsSettings(false);
+ $('#subjectTitle').textContent=shorts?'PSH 공부':s.name;
  document.querySelectorAll('.tab').forEach(tab=>tab.classList.toggle('active',tab.dataset.mode===mode));
  const card=$('#studyCard');
  card.className=mode==='concept'&&studyView==='reading'?'study-card reading-card':'study-card feed-card';
@@ -224,6 +230,48 @@ function closeDetail(goBack){
  if(goBack&&detailHistoryActive&&typeof history.back==='function')history.back();
  detailHistoryActive=false;
 }
+// Shorts에서는 학습 필터와 단원 컨트롤을 설정 창으로 옮긴다.
+function openShortsSettings(){
+ if(!$('#shortsSettings').hidden||$('#study').hidden||mode!=='concept'||studyView!=='quick')return;
+ settingsFocusReturn=document.activeElement;
+ const filter=$('#shortsReviewFilter'),unitSelect=$('#shortsUnitFilter');
+ filter.innerHTML=$('#reviewFilter').innerHTML;filter.value=reviewFilter;
+ unitSelect.innerHTML=$('#unitFilter').innerHTML;unitSelect.value=unit;
+ $('#shortsTabConcept').setAttribute('aria-pressed','true');
+ $('#shortsTabQuiz').setAttribute('aria-pressed','false');
+ $('#shortsSettings').hidden=false;gesture=null;
+ $('#shortsSettingsClose').focus();
+ history.pushState({shortsSettings:true},'',location.href);
+ settingsHistoryActive=true;
+}
+function closeShortsSettings(goBack){
+ if($('#shortsSettings').hidden)return;
+ $('#shortsSettings').hidden=true;gesture=null;
+ if(settingsFocusReturn?.isConnected)settingsFocusReturn.focus();
+ settingsFocusReturn=null;
+ if(goBack&&settingsHistoryActive&&typeof history.back==='function'){
+  ignoreNextPop=true;history.back();
+ }
+ settingsHistoryActive=false;
+}
+$('#shortsSettingsButton').onclick=openShortsSettings;
+$('#shortsSettingsClose').onclick=()=>closeShortsSettings(true);
+$('#shortsSettingsBackdrop').onclick=()=>closeShortsSettings(true);
+$('#shortsReviewFilter').onchange=e=>{
+ const next=e.target.value;closeShortsSettings(true);changeReviewFilter(next);
+};
+$('#shortsUnitFilter').onchange=e=>{
+ const next=e.target.value;closeShortsSettings(true);
+ $('#unitFilter').value=next;$('#unitFilter').onchange({target:{value:next}});
+};
+$('#shortsRandom').onclick=()=>{closeShortsSettings(true);shuffle()};
+$('#shortsTheme').onclick=()=>{$('#themeButton').onclick();closeShortsSettings(true)};
+$('#shortsTabConcept').onclick=()=>closeShortsSettings(true);
+$('#shortsTabQuiz').onclick=()=>{
+ closeShortsSettings(true);
+ const button=document.querySelector('.tab[data-mode="quiz"]');
+ if(button)button.onclick?.();
+};
 // 카드는 항상 과목+검증된 고유 ID로 연결한다. 개인 기록은 서버로 전송되지 않는다.
 function updatePersonalInView(){
  const item=currentCard();if(!item||mode!=='concept')return;
@@ -330,16 +378,16 @@ $('#themeButton').onclick=()=>{
 const viewport=$('#cardViewport');
 viewport.addEventListener('touchstart',e=>{
  gesture=null;
- if(!$('#studyDetail').hidden||e.touches.length!==1||e.target?.closest?.('button,a,input,select,textarea,summary,details'))return;
+ if(!$('#shortsSettings').hidden||!$('#studyDetail').hidden||e.touches.length!==1||e.target?.closest?.('button,a,input,select,textarea,summary,details'))return;
  const t=e.touches[0];
  gesture={x:t.clientX,y:t.clientY,started:Date.now(),identifier:t.identifier};
 },{passive:true});
 viewport.addEventListener('touchmove',e=>{
- if(gesture&&$('#studyDetail').hidden&&!(mode==='concept'&&studyView==='reading')&&e.cancelable)e.preventDefault();
+ if(gesture&&$('#studyDetail').hidden&&$('#shortsSettings').hidden&&!(mode==='concept'&&studyView==='reading')&&e.cancelable)e.preventDefault();
 },{passive:false});
 viewport.addEventListener('touchend',e=>{
  const g=gesture;gesture=null;
- if(!g||!$('#studyDetail').hidden||e.changedTouches.length!==1)return;
+ if(!g||!$('#shortsSettings').hidden||!$('#studyDetail').hidden||e.changedTouches.length!==1)return;
  const t=e.changedTouches[0];
  if(g.identifier!==undefined&&t.identifier!==undefined&&g.identifier!==t.identifier)return;
  const dx=t.clientX-g.x,dy=t.clientY-g.y,elapsed=Date.now()-g.started;
@@ -359,6 +407,7 @@ viewport.addEventListener('touchcancel',()=>{gesture=null},{passive:true});
 window.addEventListener('blur',()=>{gesture=null});
 function syncRoute(){
  if(ignoreNextPop){ignoreNextPop=false;return;}
+ if(!$('#shortsSettings').hidden){closeShortsSettings(false);return;}
  if(!$('#memoOverlay').hidden){
   if(!closeMemo(false)&&typeof history.pushState==='function')history.pushState({memo:true},'',location.href);
   return;
@@ -368,6 +417,7 @@ function syncRoute(){
 }
 window.onpopstate=syncRoute;window.onhashchange=syncRoute;
 document.addEventListener('keydown',e=>{
+ if(!$('#shortsSettings').hidden){if(e.key==='Escape'){e.preventDefault();closeShortsSettings(true)}return}
  if(!$('#memoOverlay').hidden){if(e.key==='Escape'){e.preventDefault();closeMemo(true)}return}
  if(!$('#studyDetail').hidden){if(e.key==='Escape'){e.preventDefault();closeDetail(true)}return}
  if($('#study').hidden)return;
