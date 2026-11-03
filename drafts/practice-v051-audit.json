@@ -91,11 +91,11 @@
     "officialQuestionTextReproduced": false,
     "draftFilesExcludedFromApp": true,
     "existing20Unchanged": true,
-    "allDirectExamLinksMatchExactTopic": true,
     "zeroExactExamLinkAllowed": true,
     "numericRecalculationPassed": true,
     "noNewItemsInLiveApp": true,
-    "allFiveRationalesInspected": true
+    "allFiveRationalesInspected": true,
+    "directExamTopicOverlapRechecked": true
   },
   "limits": [
     "평가원 80문항의 주제색인과 고난도 출제 포인트를 참고했지만 전 80문항의 원문 선지 전수를 이 문서에서 다시 검수했다는 의미는 아니다.",
@@ -1201,6 +1201,7 @@
       "2027 9월 사문 6번": "의복·사회 변화/사회 운동의 맥락, 머튼·차별 교제·낙인 일탈 이론과는 직접 관련 없음"
     },
     "publicationRecommendation": "remain-unpublished-until-UI-testing-and-difficulty-hardening",
-    "secondOpinionLimit": "1개 검수자 기반의 교재·논리 재대조 및 정량 계산 재검산. 별도 외부 출제 전문가 독립감수 또는 실제 수험생의 통계 검증으로 간주하지 않는다."
+    "secondOpinionLimit": "1개 검수자 기반의 교재·논리 재대조 및 정량 계산 재검산. 별도 외부 출제 전문가 독립감수 또는 실제 수험생의 통계 검증으로 간주하지 않는다.",
+    "wordingSourceMethod": "20문항 각각 지정된 교재의 관련 본문을 읽고 검토했으며, PDF 핵심 용어/표기 54건의 해당 페이지 존재 여부를 추가 자동 검사했다. 단어 포함 여부만으로 선지 사실성을 검증했다고 보지 않는다."
   }
 }
