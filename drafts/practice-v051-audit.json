@@ -1,0 +1,557 @@
+{
+  "version": "V0.5.1-draft",
+  "date": "2026-11-03",
+  "basis": "제공된 2027학년도 EBS 수능특강 생윤·사문 원문과 2027학년도 6·9월 평가원 문제·해설의 출제 포인트를 참고한 독립 창작",
+  "examInventory": {
+    "2027-June-E": 20,
+    "2027-Sept-E": 20,
+    "2027-June-S": 20,
+    "2027-Sept-S": 20
+  },
+  "existingQuestions": 20,
+  "proposedNewQuestions": 20,
+  "proposedTotalAfterRelease": 40,
+  "newChoices": 100,
+  "subjects": {
+    "ethics": 10,
+    "culture": 10
+  },
+  "newQuestionCoverage": [
+    "E08",
+    "E15",
+    "E07",
+    "E11",
+    "E09",
+    "E02",
+    "E03",
+    "E10",
+    "S12",
+    "S14",
+    "S16",
+    "S13",
+    "S02",
+    "S09",
+    "S07",
+    "S06"
+  ],
+  "newlyCoveredComparedToCurrent": [
+    "E11",
+    "E09",
+    "E03",
+    "E10",
+    "S12",
+    "S16",
+    "S13",
+    "S07",
+    "S06"
+  ],
+  "coveredAfterRelease": 22,
+  "curriculumChapters": 31,
+  "remainingUncovered": [
+    "E05",
+    "E06",
+    "E12",
+    "E13",
+    "E14",
+    "S04",
+    "S10",
+    "S11",
+    "S15"
+  ],
+  "answerDistribution": {
+    "ethics": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "culture": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  "numericItemsChecked": [
+    "p51-s01",
+    "p51-s02",
+    "p51-s03",
+    "p51-s04",
+    "p51-s09",
+    "p51-s10"
+  ],
+  "checks": {
+    "uniqueIds": true,
+    "correctOptionIndex": true,
+    "exactlyFiveChoices": true,
+    "exactlyFiveRationales": true,
+    "nonemptySources": true,
+    "officialQuestionTextReproduced": false,
+    "draftFilesExcludedFromApp": true,
+    "existing20Unchanged": true
+  },
+  "limits": [
+    "평가원 80문항의 주제색인과 고난도 출제 포인트를 참고했지만 전 80문항의 원문 선지 전수를 이 문서에서 다시 검수했다는 의미는 아니다.",
+    "새 문항은 평가원·EBS에 수록된 원문 문제가 아니라 출제 요소를 참조해 새로 작성한 문제다.",
+    "난도 표기는 예상 난도이며 실제 수험생 응답에 의한 통계적 문항 난도·변별도 검증 결과가 아니다.",
+    "원문 교재 근거·논리·수치 검수와 앱 최종 게시·휴대폰 렌더 테스트는 별개다.",
+    "추가 20문항은 현재 앱에서 로딩되지 않으며 정식 게시 전에 독립 2차 검토와 실제 UI·채점 검증이 필요하다."
+  ],
+  "releaseState": "staged-proposal-not-published",
+  "items": [
+    {
+      "id": "p51-e01",
+      "subject": "ethics",
+      "chapterId": "E08",
+      "title": "롤스·싱어의 시민 불복종",
+      "expectedDifficulty": "상",
+      "sourceFile": "2027 수능특강 생활과 윤리 1.pdf",
+      "sourcePages": [
+        87
+      ],
+      "examAnalogues": [
+        "2027 6월 생윤 11번",
+        "2027 9월 생윤 9번"
+      ],
+      "answerIndex": 3,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-e02",
+      "subject": "ethics",
+      "chapterId": "E15",
+      "title": "롤스·싱어의 해외 원조",
+      "expectedDifficulty": "상",
+      "sourceFile": "2027 수능특강 생활과 윤리 1.pdf",
+      "sourcePages": [
+        162
+      ],
+      "examAnalogues": [
+        "2027 6월 생윤 19번",
+        "2027 9월 생윤 13번"
+      ],
+      "answerIndex": 4,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-e03",
+      "subject": "ethics",
+      "chapterId": "E07",
+      "title": "롤스·노직의 분배 정의와 교정",
+      "expectedDifficulty": "상",
+      "sourceFile": "2027 수능특강 생활과 윤리 1.pdf",
+      "sourcePages": [
+        72,
+        73
+      ],
+      "examAnalogues": [
+        "2027 6월 생윤 6번",
+        "2027 9월 생윤 19번"
+      ],
+      "answerIndex": 1,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-e04",
+      "subject": "ethics",
+      "chapterId": "E11",
+      "title": "칸트·싱어·테일러의 자연관",
+      "expectedDifficulty": "상",
+      "sourceFile": "2027 수능특강 생활과 윤리 1.pdf",
+      "sourcePages": [
+        44,
+        115,
+        116
+      ],
+      "examAnalogues": [
+        "2027 6월 생윤 14번",
+        "2027 9월 생윤 11번"
+      ],
+      "answerIndex": 0,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-e05",
+      "subject": "ethics",
+      "chapterId": "E09",
+      "title": "요나스의 책임 윤리",
+      "expectedDifficulty": "중상",
+      "sourceFile": "2027 수능특강 생활과 윤리 1.pdf",
+      "sourcePages": [
+        96,
+        97
+      ],
+      "examAnalogues": [
+        "2027 6월 생윤 5번",
+        "2027 9월 생윤 17번"
+      ],
+      "answerIndex": 2,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-e06",
+      "subject": "ethics",
+      "chapterId": "E07",
+      "title": "칸트와 베카리아의 사형 논쟁",
+      "expectedDifficulty": "상",
+      "sourceFile": "2027 수능특강 생활과 윤리 1.pdf",
+      "sourcePages": [
+        75
+      ],
+      "examAnalogues": [
+        "2027 6월 생윤 9번",
+        "2027 9월 생윤 7번"
+      ],
+      "answerIndex": 4,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-e07",
+      "subject": "ethics",
+      "chapterId": "E02",
+      "title": "벤담·밀과 규칙 공리주의",
+      "expectedDifficulty": "중상",
+      "sourceFile": "2027 수능특강 생활과 윤리 1.pdf",
+      "sourcePages": [
+        21
+      ],
+      "examAnalogues": [
+        "2027 6월 생윤 15번"
+      ],
+      "answerIndex": 1,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-e08",
+      "subject": "ethics",
+      "chapterId": "E07",
+      "title": "니부어의 사회 윤리",
+      "expectedDifficulty": "중상",
+      "sourceFile": "2027 수능특강 생활과 윤리 1.pdf",
+      "sourcePages": [
+        70
+      ],
+      "examAnalogues": [
+        "2027 6월 생윤 10번",
+        "2027 9월 생윤 6번"
+      ],
+      "answerIndex": 2,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-e09",
+      "subject": "ethics",
+      "chapterId": "E03",
+      "title": "안락사 유형과 의사 조력 자살",
+      "expectedDifficulty": "상",
+      "sourceFile": "2027 수능특강 생활과 윤리 1.pdf",
+      "sourcePages": [
+        33
+      ],
+      "examAnalogues": [
+        "2027 6월 생윤 20번"
+      ],
+      "answerIndex": 3,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-e10",
+      "subject": "ethics",
+      "chapterId": "E10",
+      "title": "정보 자기 결정권과 공적 알 권리",
+      "expectedDifficulty": "중상",
+      "sourceFile": "2027 수능특강 생활과 윤리 1.pdf",
+      "sourcePages": [
+        104,
+        105,
+        106
+      ],
+      "examAnalogues": [
+        "2027 9월 생윤 16번"
+      ],
+      "answerIndex": 0,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-s01",
+      "subject": "culture",
+      "chapterId": "S12",
+      "title": "세대 간 계층 이동표 ①",
+      "expectedDifficulty": "상",
+      "sourceFile": "2027 수능 특강 사회문화.pdf",
+      "sourcePages": [
+        112,
+        113
+      ],
+      "examAnalogues": [
+        "2027 6월 사문 10번",
+        "2027 9월 사문 10번"
+      ],
+      "answerIndex": 2,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "independently-recalculated",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-s02",
+      "subject": "culture",
+      "chapterId": "S14",
+      "title": "사회 보험·공공 부조의 중복 수혜",
+      "expectedDifficulty": "최상",
+      "sourceFile": "2027 수능 특강 사회문화.pdf",
+      "sourcePages": [
+        130,
+        131
+      ],
+      "examAnalogues": [
+        "2027 6월 사문 15번",
+        "2027 9월 사문 15번"
+      ],
+      "answerIndex": 4,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "independently-recalculated",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-s03",
+      "subject": "culture",
+      "chapterId": "S16",
+      "title": "유소년·노년 부양비와 노령화 지수 ①",
+      "expectedDifficulty": "최상",
+      "sourceFile": "2027 수능 특강 사회문화.pdf",
+      "sourcePages": [
+        152,
+        156
+      ],
+      "examAnalogues": [
+        "2027 6월 사문 20번",
+        "2027 9월 사문 20번"
+      ],
+      "answerIndex": 1,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "independently-recalculated",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-s04",
+      "subject": "culture",
+      "chapterId": "S13",
+      "title": "절대적 빈곤·상대적 빈곤의 교집합",
+      "expectedDifficulty": "상",
+      "sourceFile": "2027 수능 특강 사회문화.pdf",
+      "sourcePages": [
+        124
+      ],
+      "examAnalogues": [
+        "2027 6월 사문 9번",
+        "2027 9월 사문 16번"
+      ],
+      "answerIndex": 0,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "independently-recalculated",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-s05",
+      "subject": "culture",
+      "chapterId": "S02",
+      "title": "실험 설계와 인과 관계",
+      "expectedDifficulty": "상",
+      "sourceFile": "2027 수능 특강 사회문화.pdf",
+      "sourcePages": [
+        18,
+        19,
+        28,
+        29
+      ],
+      "examAnalogues": [
+        "2027 6월 사문 7번",
+        "2027 9월 사문 4번"
+      ],
+      "answerIndex": 3,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-s06",
+      "subject": "culture",
+      "chapterId": "S09",
+      "title": "자극 전파와 문화 융합",
+      "expectedDifficulty": "중상",
+      "sourceFile": "2027 수능 특강 사회문화.pdf",
+      "sourcePages": [
+        94,
+        95
+      ],
+      "examAnalogues": [
+        "2027 6월 사문 12번",
+        "2027 9월 사문 14번"
+      ],
+      "answerIndex": 1,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-s07",
+      "subject": "culture",
+      "chapterId": "S07",
+      "title": "아노미·차별 교제·낙인 이론",
+      "expectedDifficulty": "상",
+      "sourceFile": "2027 수능 특강 사회문화.pdf",
+      "sourcePages": [
+        68
+      ],
+      "examAnalogues": [
+        "2027 6월 사문 5번",
+        "2027 9월 사문 6번"
+      ],
+      "answerIndex": 4,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-s08",
+      "subject": "culture",
+      "chapterId": "S06",
+      "title": "관료제·탈관료제의 의사 결정",
+      "expectedDifficulty": "중상",
+      "sourceFile": "2027 수능 특강 사회문화.pdf",
+      "sourcePages": [
+        58
+      ],
+      "examAnalogues": [
+        "2027 6월 사문 3번",
+        "2027 9월 사문 7번"
+      ],
+      "answerIndex": 2,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "not-applicable",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-s09",
+      "subject": "culture",
+      "chapterId": "S12",
+      "title": "세대 간 계층 이동표 ②",
+      "expectedDifficulty": "최상",
+      "sourceFile": "2027 수능 특강 사회문화.pdf",
+      "sourcePages": [
+        112,
+        113
+      ],
+      "examAnalogues": [
+        "2027 6월 사문 10번",
+        "2027 9월 사문 10번"
+      ],
+      "answerIndex": 0,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "independently-recalculated",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    },
+    {
+      "id": "p51-s10",
+      "subject": "culture",
+      "chapterId": "S16",
+      "title": "유소년·노년 부양비와 노령화 지수 ②",
+      "expectedDifficulty": "최상",
+      "sourceFile": "2027 수능 특강 사회문화.pdf",
+      "sourcePages": [
+        152,
+        156
+      ],
+      "examAnalogues": [
+        "2027 6월 사문 20번",
+        "2027 9월 사문 20번"
+      ],
+      "answerIndex": 3,
+      "choiceCount": 5,
+      "rationaleCount": 5,
+      "numericRecalculation": "independently-recalculated",
+      "originalQuestion": true,
+      "contentReview": "author-checked-and-structure-validated",
+      "published": false
+    }
+  ]
+}
